@@ -1,3 +1,4 @@
+import Footer from "@/Components/Footer/Footer";
 import "./globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
 import { Inter, JetBrains_Mono } from "next/font/google";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

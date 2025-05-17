@@ -1,6 +1,82 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Banner dot */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, #d28faf 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.mask-left-to-right-fade {
+  mask-image: linear-gradient(to right, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+}
+
+/* Meteors */
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+/* Build Solutions. Drive Impact - for gradient animation */
+@keyframes gradient-y {
+
+  0%,
+  100% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-y 6s ease infinite;
+}
+
+.bg-gradient-text {
+  background-image: linear-gradient(to bottom, #22d3ee, #6366f1, #e879f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* styles/globals.css */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease infinite;
+}
+
 @theme inline {
   /* Configure your theme variables here */
   --font-display: "Inter", "sans-serif";

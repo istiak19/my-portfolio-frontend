@@ -40,17 +40,17 @@ const Navbar = () => {
     return (
         <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-opacity-80 border-b border-gray-200 dark:border-gray-700">
             <nav className="flex items-center justify-between px-6 py-3 w-11/12 mx-auto">
-                {/* Logo on the left */}
+                {/* Left side */}
                 <Link href="/" className="flex items-center group">
                     <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform duration-200">
                         <Image src={logo} alt="Logo" fill className="object-cover" />
                     </div>
-                    <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-pink-400 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                    <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
                         Istiak Ahamed
                     </span>
                 </Link>
 
-                {/* Right side: Links + Resume + Mobile toggle */}
+                {/* Right side */}
                 <div className="flex items-center gap-4">
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex items-center gap-6 text-sm font-medium">

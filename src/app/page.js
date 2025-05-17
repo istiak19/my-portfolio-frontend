@@ -1,9 +1,11 @@
 'use client';
 
+import Banner from "@/Components/Banner/Banner";
+
 export default function AnimatedBox() {
   return (
     <div>
-      <p className="text-white p-4">Hello Motion!</p>
+      <Banner />
     </div>
   );
 }
