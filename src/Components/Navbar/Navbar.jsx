@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
-import { Button } from "../ui/moving-border";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
 import { useState } from "react";

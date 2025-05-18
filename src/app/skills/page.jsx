@@ -1,7 +1,7 @@
 import Skills from "@/Components/Skills/Skills";
 
 export const metadata = {
-    title: "Skills | YourSiteName",
+    title: "Istiak Ahamed – Skills",
     description: "A list of technologies and skills I work with.",
 };
 

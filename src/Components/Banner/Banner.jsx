@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Cover } from "../ui/cover";
 import anikPic from "../../../public/Anik.jpg";
-import { Button } from "../ui/moving-border";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdMail } from "react-icons/md";

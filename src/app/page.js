@@ -2,6 +2,7 @@
 
 import AboutSection from "@/Components/AboutSection/AboutSection";
 import Banner from "@/Components/Banner/Banner";
+import EducationJourney from "@/Components/EducationJourney/EducationJourney";
 import SkillSection from "@/Components/SkillSection/SkillSection";
 
 export default function AnimatedBox() {
@@ -10,6 +11,7 @@ export default function AnimatedBox() {
       <Banner />
       <AboutSection />
       <SkillSection />
+      <EducationJourney />
     </div>
   );
 }

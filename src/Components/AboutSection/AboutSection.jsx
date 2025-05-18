@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import profilePic from "../../../public/Anik.jpg";
-import { Button } from "../ui/moving-border";
 import Link from "next/link";
-import { MoveUpRight } from "lucide-react";
 
 const AboutSection = () => {
     return (
