@@ -43,7 +43,7 @@ const Contact = () => {
 
     return (
         <div>
-            <div className="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white py-14 px-4 min-h-screen relative">
+            <div className="bg-black text-white py-14 px-4 min-h-screen relative">
                 <div className="w-11/12 mx-auto px-6 z-10 relative">
                     <div>
                         <h2 className="text-5xl font-bold text-center mb-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">

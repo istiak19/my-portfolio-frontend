@@ -163,7 +163,6 @@ const Banner = () => {
                             src={anikPic}
                             alt="User Image"
                             fill
-                            className="object-cover"
                         />
                     </figure>
 
