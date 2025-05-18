@@ -50,12 +50,10 @@ const AboutSection = () => {
                     </p>
                     <div className="mt-6 flex justify-center lg:justify-start">
                         <Link href='/about'>
-                            <Button
-                                borderRadius="2rem"
-                                className="flex items-center gap-2 px-6 py-2 text-sm text-white transition-all duration-300 ease-in-out bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-md hover:shadow-lg rounded-full cursor-pointer"
-                            >
-                                See More <MoveUpRight />
-                            </Button>
+                            <button className="px-4 py-2 cursor-pointer backdrop-blur-sm border bg-transparent border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+                                <span>See More →</span>
+                                <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+                            </button>
                         </Link>
                     </div>
                 </div>

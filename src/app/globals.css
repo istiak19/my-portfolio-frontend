@@ -34,11 +34,9 @@
 }
 
 .clip-hexagon {
-  clip-path: polygon(
-    25% 5%, 75% 5%,
-    100% 50%, 75% 95%,
-    25% 95%, 0% 50%
-  );
+  clip-path: polygon(25% 5%, 75% 5%,
+      100% 50%, 75% 95%,
+      25% 95%, 0% 50%);
 }
 
 /* styles/globals.css */
@@ -58,6 +56,53 @@
   background-size: 200% 200%;
   animation: gradient-x 4s ease infinite;
 }
+
+/* Skill css */
+@keyframes borderSpin {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-borderSpin {
+  animation: borderSpin 3s linear infinite;
+}
+
+.shiny:hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny:hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
+  transform: rotate(45deg);
+  animation: shineMove 1s ease-in-out;
+}
+
+@keyframes shineMove {
+  from {
+    transform: translateX(-100%) rotate(45deg);
+  }
+
+  to {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* normal */
 
 @theme inline {
   /* Configure your theme variables here */

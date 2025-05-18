@@ -143,13 +143,14 @@ const Banner = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-3">
-                        <Button
+                        <button
                             onClick={handleResumeDownload}
-                            borderRadius="2rem"
-                            className="flex items-center gap-2 px-5 py-2 text-sm bg-gray-700 hover:text-blue-400 cursor-pointer transition text-white font-semibold shadow-xl"
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            Download Resume <IoCloudDownloadOutline className="text-lg" />
-                        </Button>
+                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                            <span className="font-medium">Download Resume</span>
+                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                        </button>
                     </div>
                 </div>
 

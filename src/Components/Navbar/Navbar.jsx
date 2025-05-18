@@ -17,7 +17,7 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
-        { name: "Education", path: "/edu" },
+        { name: "Skills", path: "/skills" },
         { name: "Projects", path: "/project" },
         { name: "Contact", path: "/contact" },
     ];
@@ -69,13 +69,14 @@ const Navbar = () => {
                     </ul>
 
                     {/* Resume Button (Desktop only) */}
-                    <Button
+                    <button
                         onClick={handleResumeDownload}
-                        borderRadius="2rem"
-                        className="hidden md:flex items-center gap-2 px-5 py-2 text-sm btn bg-gray-800 shadow-2xl hover:scale-105 hover:text-blue-400 text-black font-semibold dark:text-white border-neutral-200 dark:border-slate-800 transition-colors duration-200"
+                        className="group hidden relative md:inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                     >
-                        Download Resume <IoCloudDownloadOutline className="text-lg" />
-                    </Button>
+                        <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                        <span className="font-medium">Download Resume</span>
+                        <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                    </button>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -123,9 +124,11 @@ const Navbar = () => {
                                 setIsOpen(false);
                                 handleResumeDownload();
                             }}
-                            className="flex items-center gap-2 px-6 rounded-full py-2 text-sm text-white border border-blue-400 hover:text-blue-400"
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            Download Resume <IoCloudDownloadOutline className="text-lg" />
+                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                            <span className="font-medium">Download Resume</span>
+                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </button>
                     </li>
                 </ul>
