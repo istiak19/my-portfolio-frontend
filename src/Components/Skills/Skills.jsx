@@ -27,10 +27,10 @@ const Skills = () => {
     ];
 
     return (
-        <section className="pb-10 px-4 md:px-0 bg-black">
+        <section className="pb-10 px-4 py-16 md:px-0 bg-black">
             <div className="max-w-3xl mx-auto">
                 <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-                    <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:py-8 relative z-20 font-bold tracking-tight">
+                    <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:py-8 relative z-20 font-semibold tracking-tight">
                         Explore My Journey Through <br /> Technical Expertise
                     </h2>
                     <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">

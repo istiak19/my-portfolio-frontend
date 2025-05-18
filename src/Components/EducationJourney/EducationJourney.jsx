@@ -10,13 +10,13 @@ const fadeUp = {
 const EducationJourney = () => {
     return (
         <div className="bg-black">
-            <div className="w-11/12 mx-auto text-gray-200 py-12 px-6">
+            <div className="w-11/12 mx-auto text-gray-200 py-10 px-6">
                 <motion.h2
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-10"
+                    className="md:text-4xl text-2xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-10"
                 >
                     Education Journey
                 </motion.h2>

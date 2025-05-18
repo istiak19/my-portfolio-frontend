@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="bg-black text-white py-14 px-4 min-h-screen relative">
                 <div className="w-11/12 mx-auto px-6 z-10 relative">
                     <div>
-                        <h2 className="text-5xl font-bold text-center mb-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
+                        <h2 className="text-5xl font-semibold text-center mb-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
                             Let’s Connect
                         </h2>
                         <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
@@ -54,7 +54,7 @@ const Contact = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
+                    <div className="grid md:grid-cols-2 gap-10 items-start px-6">
                         {/* Contact Info */}
                         <div className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500">
                             <div className="bg-gray-900 p-6 rounded-[14px] shadow-xl hover:shadow-primary/30 transition-all duration-300">
