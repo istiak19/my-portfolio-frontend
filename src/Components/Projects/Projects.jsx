@@ -6,7 +6,8 @@ import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
 import fundProject from '../../../public/project/fundProject.png';
 import Link from 'next/link';
-import { BackgroundLines } from '../ui/background-lines';
+import { SparklesCore } from '../ui/sparkles';
+import { MdArrowOutward } from 'react-icons/md';
 
 const projects = [
     {
@@ -44,14 +45,34 @@ const Projects = () => {
     return (
         <div className='bg-black'>
             <div className="w-11/12 mx-auto text-white py-16 px-6 text-center">
-                <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+                <div className="w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
                     <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">
                         Creative & Technical Highlights
                     </h2>
-                    <p className="mb-16 text-gray-400 max-w-2xl mx-auto">
+                    <p className="mb-5 text-gray-400 max-w-2xl mx-auto">
                         Explore a curated selection of my projects that combine creative design, clean code, and practical functionality — delivering seamless user experiences and innovative solutions.
                     </p>
-                </BackgroundLines>
+                    <div className="w-[40rem] h-[10rem] relative">
+                        {/* Gradients */}
+                        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+                        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+                        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+                        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+                        {/* Core component */}
+                        <SparklesCore
+                            background="transparent"
+                            minSize={0.4}
+                            maxSize={1}
+                            particleDensity={1200}
+                            className="w-full h-full"
+                            particleColor="#FFFFFF"
+                        />
+
+                        {/* Radial Gradient to prevent sharp edges */}
+                        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                    </div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
@@ -75,13 +96,14 @@ const Projects = () => {
                                     <a href={project?.viewLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30
+                                        bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
-                                        Live Demo ↗
+                                        Live Demo<MdArrowOutward className='text-indigo-500' />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </a>
                                     <Link href={`/project/${project?.id}`}
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-medium bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
                                         View Details →
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
@@ -91,9 +113,9 @@ const Projects = () => {
                                     <a href={project?.githubLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-medium border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                                     >
-                                        GitHub Code <FaGithub className="text-lg" />
+                                        GitHub Code <FaGithub className="text-lg text-indigo-500" />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </a>
                                 </div>

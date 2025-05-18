@@ -5,6 +5,7 @@ import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import fundProject from '../../../public/project/fundProject.png';
 import Link from 'next/link';
+import { MdArrowOutward } from 'react-icons/md';
 
 const projects = [
     {
@@ -63,13 +64,14 @@ const ProjectSection = () => {
                                     <a href={project?.viewLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30
+                                        bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
-                                        Live Demo ↗
+                                        Live Demo<MdArrowOutward className='text-indigo-500' />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </a>
                                     <Link href={`/project/${project?.id}`}
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-medium bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
                                         View Details →
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
@@ -79,9 +81,9 @@ const ProjectSection = () => {
                                     <a href={project?.githubLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-medium border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                                     >
-                                        GitHub Code <FaGithub className="text-lg" />
+                                        GitHub Code <FaGithub className="text-lg text-indigo-500" />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </a>
                                 </div>

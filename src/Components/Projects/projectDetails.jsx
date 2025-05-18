@@ -15,7 +15,7 @@ const ProjectDetails = ({ id }) => {
             id: 1,
             name: "BloodBanker",
             image: bloodProject,
-            technologies: "React, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase",
+            technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase",
             description: "BloodBanker is an online platform designed to connect blood donors and recipients, enabling seamless and efficient blood donation management. It allows users to register as donors, browse available donation campaigns, and get in touch with nearby blood banks or individuals in need. The platform also offers features like user profiles, donation tracking, and volunteer opportunities. By making blood donation more accessible, organized, and impactful for communities, BloodBanker not only saves lives but also fosters a spirit of community support, encourages volunteerism, and strengthens social responsibility across society.",
             challenges: "Seamlessly connecting the platform with local blood banks for real-time updates.",
             improvements: "Ensuring secure data storage and seamless integration with blood banks and donation campaigns.",
@@ -63,7 +63,7 @@ const ProjectDetails = ({ id }) => {
             id: 3,
             name: "EduCircle",
             image: eduProject,
-            technologies: "React, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
+            technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
             description: "EduCircle is an interactive platform designed for managing assignments in an online group study environment.",
             challenges: "Optimizing MongoDB queries for efficient data retrieval and updates.",
             improvements: "Ensuring secure login and role-based access control.",
@@ -83,7 +83,7 @@ const ProjectDetails = ({ id }) => {
             id: 4,
             name: "Fundsphere",
             image: fundProject,
-            technologies: "React, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
+            technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
             description: "FundSphere is a crowdfunding platform that enables users to raise funds for various causes.",
             challenges: "Handling donations and ensuring secure transactions.",
             improvements: "Implementing secure payment gateways.",
@@ -113,7 +113,7 @@ const ProjectDetails = ({ id }) => {
                     {project.name}
                 </h1>
 
-                <div className="relative w-full h-[650px] rounded-xl p-[3px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-2xl">
+                <div className="relative w-full h-[650px] rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-2xl">
                     <div className="relative w-full h-full rounded-[10px] overflow-hidden bg-white dark:bg-gray-900">
                         <Image
                             src={project.image}
@@ -134,10 +134,10 @@ const ProjectDetails = ({ id }) => {
                             href={project.clientLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            <FaGithub size={22} />
-                            <span className="font-semibold text-lg">Client Repo</span>
+                            <FaGithub size={22} className="text-indigo-500" />
+                            <span className="font-medium text-lg">Client Repo</span>
                             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </Link>
                     )}
@@ -146,10 +146,10 @@ const ProjectDetails = ({ id }) => {
                             href={project.serverLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            <FaGithub size={22} />
-                            <span className="font-semibold text-lg">Server Repo</span>
+                            <FaGithub size={22} className="text-indigo-500" />
+                            <span className="font-medium text-lg">Server Repo</span>
                             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </Link>
                     )}
@@ -158,23 +158,23 @@ const ProjectDetails = ({ id }) => {
                             href={project.liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            <FaExternalLinkAlt size={22} />
-                            <span className="font-semibold text-lg">Live Site</span>
+                            <FaExternalLinkAlt size={22} className="text-indigo-500" />
+                            <span className="font-medium text-lg">Live Site</span>
                             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </Link>
                     )}
                 </div>
                 <section>
-                    <h2 className="text-3xl font-semibold mb-3 border-b-2 border-indigo-600 inline-block pb-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
+                    <h2 className="text-3xl font-semibold mb-3 border-b-2 border-indigo-500 inline-block pb-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                         Technologies Used
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400">{project.technologies}</p>
                 </section>
 
                 <section>
-                    <h2 className="text-3xl font-semibold mb-4 border-b-2 border-indigo-600 inline-block pb-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
+                    <h2 className="text-3xl font-semibold mb-4 border-b-2 border-indigo-500 inline-block pb-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                         Features
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-lg">
@@ -186,14 +186,14 @@ const ProjectDetails = ({ id }) => {
 
                 {project.challenges && (
                     <section>
-                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-red-600 dark:text-red-400">Challenges</h2>
+                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-red-600 border-b-2 border-red-500 inline-block dark:text-red-400">Challenges</h2>
                         <p className="text-gray-600 dark:text-gray-400">{project.challenges}</p>
                     </section>
                 )}
 
                 {project.improvements && (
                     <section>
-                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-green-600 dark:text-green-400">Improvements</h2>
+                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-green-600 border-b-2 inline-block border-red-500 dark:text-green-400">Improvements</h2>
                         <p className="text-gray-600 dark:text-gray-400">{project.improvements}</p>
                     </section>
                 )}

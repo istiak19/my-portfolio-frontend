@@ -70,10 +70,12 @@ const Navbar = () => {
                     {/* Resume Button (Desktop only) */}
                     <button
                         onClick={handleResumeDownload}
-                        className="group hidden relative md:inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md bg-transparent shadow-md hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer"
                     >
-                        <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
-                        <span className="font-medium">Download Resume</span>
+                        <IoCloudDownloadOutline className="text-xl text-gradient transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                        <span className="font-medium bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent hover:text-indigo-500">
+                            Download Resume
+                        </span>
                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                     </button>
 

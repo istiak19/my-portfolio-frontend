@@ -80,7 +80,7 @@ const Banner = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-11/12 mx-auto px-6 py-16 md:py-24 relative z-10">
+            <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-11/12 mx-auto px-6 py-16 relative z-10">
                 {/* Left Section */}
                 <div className="lg:w-1/2 space-y-4 md:space-y-6 relative z-20">
                     <h1 className="text-xl md:text-2xl font-semibold text-gray-300 mb-2 tracking-wide">
@@ -144,9 +144,9 @@ const Banner = () => {
                     <div className="flex flex-wrap gap-3">
                         <button
                             onClick={handleResumeDownload}
-                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient border border-emerald-500/30 bg-transparent backdrop-blur-md hover:text-indigo-500 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                         >
-                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg] text-white hover:text-indigo-500" />
                             <span className="font-medium">Download Resume</span>
                             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </button>
