@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white py-14 px-4 min-h-screen relative">
                 <div className="w-11/12 mx-auto px-6 z-10 relative">
                     <div>
-                        <h2 className="text-5xl font-bold text-center mb-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+                        <h2 className="text-5xl font-bold text-center mb-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
                             Let’s Connect
                         </h2>
                         <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
@@ -58,7 +58,7 @@ const Contact = () => {
                         {/* Contact Info */}
                         <div className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500">
                             <div className="bg-gray-900 p-6 rounded-[14px] shadow-xl hover:shadow-primary/30 transition-all duration-300">
-                                <h3 className="text-2xl font-semibold mb-5 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">
+                                <h3 className="text-2xl font-semibold mb-5 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                     Contact Information
                                 </h3>
                                 <p className="text-gray-400 mb-6">
@@ -114,7 +114,7 @@ const Contact = () => {
                         {/* Contact Form */}
                         <div className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500">
                             <form className="bg-gray-900 p-6 rounded-[14px] shadow-xl hover:shadow-primary/30 transition-all duration-300 space-y-5 md:p-8">
-                                <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">
+                                <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                     Send a Message
                                 </h3>
                                 <input

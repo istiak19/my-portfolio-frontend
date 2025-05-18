@@ -33,32 +33,6 @@
   }
 }
 
-/* Build Solutions. Drive Impact - for gradient animation */
-@keyframes gradient-y {
-
-  0%,
-  100% {
-    background-position: 50% 0%;
-  }
-
-  50% {
-    background-position: 50% 100%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-y 6s ease infinite;
-}
-
-.bg-gradient-text {
-  background-image: linear-gradient(to bottom, #22d3ee, #6366f1, #e879f9);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-
 /* styles/globals.css */
 @keyframes gradient-x {
 

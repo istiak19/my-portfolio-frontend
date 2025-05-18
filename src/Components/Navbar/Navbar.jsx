@@ -22,10 +22,9 @@ const Navbar = () => {
         { name: "Contact", path: "/contact" },
     ];
 
-    const resumeViewLink =
-        "https://drive.google.com/file/d/18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5/view?usp=sharing";
-    const resumeDownloadLink =
-        "https://drive.google.com/uc?export=download&id=18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5";
+    const resumeViewLink = "https://drive.google.com/file/d/1h_fHft7_KocwHnZc_oThNB9UmnDQ6a_c/view?usp=sharing";
+
+    const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=1h_fHft7_KocwHnZc_oThNB9UmnDQ6a_c";
 
     const handleResumeDownload = () => {
         window.open(resumeViewLink, "_blank");
@@ -59,8 +58,8 @@ const Navbar = () => {
                                 <Link
                                     href={link.path}
                                     className={`transition-colors duration-200 ${isActive(link.path)
-                                        ? "text-blue-600 font-semibold"
-                                        : "text-gray-700 hover:text-blue-500 dark:text-gray-300"
+                                        ? "bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-semibold"
+                                        : "text-gray-700 hover:text-fuchsia-500 dark:text-gray-300"
                                         }`}
                                 >
                                     {link.name}

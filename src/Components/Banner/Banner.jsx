@@ -187,10 +187,10 @@ const Banner = () => {
 
                     {/* Gradient Text */}
                     <h1 className="absolute bottom-6 right-4 rotate-90 origin-right text-xs md:text-sm font-semibold flex items-center gap-2">
-                        <span className="bg-gradient-text animate-gradient">
+                        <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                             Build Solutions. Drive Impact.
                         </span>
-                        <span className="w-36 h-[1px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></span>
+                        <span className="w-40 h-[1px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></span>
                     </h1>
                 </div>
             </div>

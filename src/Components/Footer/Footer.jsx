@@ -11,7 +11,7 @@ const Footer = () => {
                 {/* Logo and Name */}
                 <div className="flex flex-col items-center gap-2">
                     <Image src={logo} alt="Logo" width={60} height={60} />
-                    <span className="text-3xl font-semibold text-white">Istiak Ahamed</span>
+                    <span className="text-3xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">Istiak Ahamed</span>
                 </div>
 
                 {/* Social Icons */}
@@ -44,7 +44,9 @@ const Footer = () => {
                 <div className="text-sm">
                     <h2>
                         Copyright © {new Date().getFullYear()} — All rights reserved by{" "}
-                        <span className="text-white font-medium">Istiak Ahamed</span>
+                        <span className="text-white font-medium">
+                            Istiak Ahamed · Junior Web Developer
+                        </span>
                     </h2>
                 </div>
             </div>
