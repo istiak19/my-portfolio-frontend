@@ -36,7 +36,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-opacity-80 border-b border-fuchsia-500 md:border-gray-200">
+        <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-black/70 border-b border-fuchsia-500 dark:border-gray-700 shadow-sm">
             <nav className="flex items-center justify-between px-6 py-3 w-11/12 mx-auto">
                 {/* Left side */}
                 <Link href="/" className="flex items-center group">
@@ -70,7 +70,7 @@ const Navbar = () => {
                     {/* Resume Button (Desktop only) */}
                     <button
                         onClick={handleResumeDownload}
-                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md bg-transparent shadow-md hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer"
+                        className="group relative md:inline-flex hidden items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md bg-transparent shadow-md hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer"
                     >
                         <IoCloudDownloadOutline className="text-xl text-gradient transition-transform duration-300 group-hover:rotate-[-15deg]" />
                         <span className="font-medium bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent hover:text-indigo-500">
