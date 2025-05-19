@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
@@ -107,50 +108,70 @@ const ProjectDetails = ({ id }) => {
     }
 
     return (
-        <div className="bg-black">
-            <div className="w-11/12 mx-auto p-8 space-y-10 py-16">
-                <h1 className="text-4xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">
+        <motion.div
+            className="bg-black"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
+            <motion.div
+                className="w-11/12 mx-auto p-8 space-y-10 py-16"
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+            >
+                <motion.h1
+                    className="text-4xl md:text-5xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4"
+                    initial={{ scale: 0.95 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
                     {project.name}
-                </h1>
+                </motion.h1>
 
-                <div className="relative w-full h-[650px] rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-2xl">
+                <motion.div
+                    className="relative w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[650px] rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-2xl"
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                >
                     <div className="relative w-full h-full rounded-[10px] overflow-hidden bg-white dark:bg-gray-900">
                         <Image
                             src={project.image}
                             alt={project.name}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
-                            className="rounded-xl p-2"
+                            className="rounded-xl p-2 object-cover"
                         />
                     </div>
-                </div>
+                </motion.div>
 
                 <section className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
                     <p>{project.description}</p>
                 </section>
-                <div className="flex flex-wrap gap-5 justify-center mt-8">
+
+                <div className="flex flex-wrap gap-4 justify-center mt-8">
                     {project.clientLink && (
                         <Link
                             href={project.clientLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
                         >
-                            <FaGithub size={22} className="text-indigo-500" />
-                            <span className="font-medium text-lg">Client Repo</span>
-                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                            <FaGithub className="text-indigo-500" />
+                            <span>Client Repo</span>
                         </Link>
                     )}
-                    {project?.serverLink && (
+                    {project.serverLink && (
                         <Link
                             href={project.serverLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
                         >
-                            <FaGithub size={22} className="text-indigo-500" />
-                            <span className="font-medium text-lg">Server Repo</span>
-                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                            <FaGithub className="text-indigo-500" />
+                            <span>Server Repo</span>
                         </Link>
                     )}
                     {project.liveLink && (
@@ -158,14 +179,14 @@ const ProjectDetails = ({ id }) => {
                             href={project.liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
                         >
-                            <FaExternalLinkAlt size={22} className="text-indigo-500" />
-                            <span className="font-medium text-lg">Live Site</span>
-                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                            <FaExternalLinkAlt className="text-indigo-500" />
+                            <span>Live Site</span>
                         </Link>
                     )}
                 </div>
+
                 <section>
                     <h2 className="text-3xl font-semibold mb-3 border-b-2 border-indigo-500 inline-block pb-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                         Technologies Used
@@ -197,9 +218,9 @@ const ProjectDetails = ({ id }) => {
                         <p className="text-gray-600 dark:text-gray-400">{project.improvements}</p>
                     </section>
                 )}
-            </div>
+            </motion.div>
             <BackgroundBeams />
-        </div>
+        </motion.div>
     );
 };
 
