@@ -1,11 +1,12 @@
 'use client';
+
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import fundProject from '../../../public/project/fundProject.png';
 import Link from 'next/link';
-import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -80,14 +81,14 @@ const ProjectSection = () => {
                                         bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
                                         Live Demo
-                                        <MdArrowOutward className="text-indigo-500" />
+                                        <ArrowUpRight className="text-indigo-500" />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </a>
                                     <Link
                                         href={`/project/${project.id}`}
                                         className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-medium bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
                                     >
-                                        View Details →
+                                        View Details <ArrowRight className="text-indigo-500" />
                                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </Link>
                                 </div>
