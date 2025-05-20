@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
-import { MdArrowOutward } from 'react-icons/md';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { SparklesCore } from '../ui/sparkles';
@@ -110,7 +110,7 @@ const Projects = () => {
                                     className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                 >
                                     Live Demo
-                                    <MdArrowOutward className="text-indigo-500" />
+                                    <ArrowUpRight className="text-indigo-500" />
                                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                 </a>
 
@@ -118,7 +118,7 @@ const Projects = () => {
                                     href={`/project/${project.id}`}
                                     className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                 >
-                                    View Details →
+                                    View Details <ArrowRight className="text-indigo-500" />
                                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                 </Link>
                             </div>

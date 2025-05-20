@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
 import { motion } from "framer-motion";
 import bloodProject from '../../../public/project/BloodProject.png';
@@ -152,6 +153,17 @@ const ProjectDetails = ({ id }) => {
                 </section>
 
                 <div className="flex flex-wrap gap-4 justify-center mt-8">
+                    {project.liveLink && (
+                        <Link
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
+                        >
+                            <span>Live Site</span>
+                            <ArrowUpRight className="text-indigo-500" />
+                        </Link>
+                    )}
                     {project.clientLink && (
                         <Link
                             href={project.clientLink}
@@ -159,8 +171,8 @@ const ProjectDetails = ({ id }) => {
                             rel="noopener noreferrer"
                             className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
                         >
-                            <FaGithub className="text-indigo-500" />
                             <span>Client Repo</span>
+                            <FaGithub className="text-indigo-500" />
                         </Link>
                     )}
                     {project.serverLink && (
@@ -172,17 +184,6 @@ const ProjectDetails = ({ id }) => {
                         >
                             <FaGithub className="text-indigo-500" />
                             <span>Server Repo</span>
-                        </Link>
-                    )}
-                    {project.liveLink && (
-                        <Link
-                            href={project.liveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
-                        >
-                            <FaExternalLinkAlt className="text-indigo-500" />
-                            <span>Live Site</span>
                         </Link>
                     )}
                 </div>

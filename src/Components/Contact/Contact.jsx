@@ -2,13 +2,7 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import {
-    FaFacebook,
-    FaGithub,
-    FaLinkedin,
-    FaTwitter,
-    FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { FloatingDock } from "../ui/floating-dock";
 import { BackgroundBeams } from "../ui/background-beams";
