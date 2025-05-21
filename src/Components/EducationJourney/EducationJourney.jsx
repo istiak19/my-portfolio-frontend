@@ -47,15 +47,14 @@ const EducationJourney = () => {
                         Bachelor of Science in Computer Science & Engineering
                     </h3>
 
-                    <p className="text-sm text-gray-400 leading-relaxed">
+                    <p className="text-sm text-gray-400 leading-relaxed space-y-1">
                         <span className="block font-medium text-white/80 text-xl">
                             Daffodil International University, Dhaka, Bangladesh
                         </span>
-                        <span>Session: 2020 – 2024</span><br />
-                        <span>
-                            CGPA:&nbsp;
-                            <span className="text-white font-semibold">3.56 / 4.00</span>
+                        <span className="block">
+                            CGPA: <span className="text-white/80 font-semibold">3.56 out of 4.00</span>
                         </span>
+                        <span className="block">Session: 2020 – 2024</span>
                     </p>
 
                     <p className="text-base text-gray-300 leading-relaxed text-justify">
