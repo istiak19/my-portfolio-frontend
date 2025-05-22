@@ -13,18 +13,18 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
     const skills = [
-        { icon: <FaHtml5 />, label: "HTML5", color: "#E34F26" },
-        { icon: <FaCss3 />, label: "CSS3", color: "#1572B6" },
-        { icon: <RiTailwindCssFill />, label: "Tailwind", color: "#38BDF8" },
-        { icon: <FaJs />, label: "JavaScript", color: "#F7DF1E" },
-        { icon: <FaReact />, label: "React.js", color: "#61DAFB" },
-        { icon: <SiNextdotjs />, label: "Next.js", color: "" },
-        { icon: <SiTypescript />, label: "TypeScript", color: "#3178C6" },
-        { icon: <BiLogoFirebase />, label: "Firebase", color: "#FFA000" },
-        { icon: <FaNode />, label: "Node.js", color: "#339933" },
-        { icon: <SiMongodb />, label: "MongoDB", color: "#47A248" },
-        { icon: <SiPostgresql />, label: "PostgreSQL", color: "#336791" },
-        { icon: <FaGithub />, label: "GitHub", color: "#F05033" },
+        { icon: <FaHtml5 className="w-full h-full p-5 text-[#E34F26]" />, label: "HTML5", color: "#E34F26" },
+        { icon: <FaCss3 className="w-full h-full p-5 text-[#1572B6]" />, label: "CSS3", color: "#1572B6" },
+        { icon: <RiTailwindCssFill className="w-full h-full p-5 text-[#38BDF8]" />, label: "Tailwind", color: "#38BDF8" },
+        { icon: <FaJs className="w-full h-full p-5 text-[#F7DF1E]" />, label: "JavaScript", color: "#F7DF1E" },
+        { icon: <FaReact className="w-full h-full p-5 text-[#61DAFB]" />, label: "React.js", color: "#61DAFB" },
+        { icon: <SiNextdotjs className="w-full h-full p-5 text-white" />, label: "Next.js", color: "" },
+        { icon: <SiTypescript className="w-full h-full p-5 text-[#3178C6]" />, label: "TypeScript", color: "#3178C6" },
+        { icon: <BiLogoFirebase className="w-full h-full p-5 text-[#FFA000]" />, label: "Firebase", color: "#FFA000" },
+        { icon: <FaNode className="w-full h-full p-5 text-[#339933]" />, label: "Node.js", color: "#339933" },
+        { icon: <SiMongodb className="w-full h-full p-5 text-[#47A248]" />, label: "MongoDB", color: "#47A248" },
+        { icon: <SiPostgresql className="w-full h-full p-5 text-[#336791]" />, label: "PostgreSQL", color: "#336791" },
+        { icon: <FaGithub className="w-full h-full p-5 text-white" />, label: "GitHub", color: "#F05033" },
     ];
 
     return (

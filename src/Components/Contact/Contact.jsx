@@ -171,7 +171,7 @@ const Contact = () => {
                             />
                             <button
                                 type="submit"
-                                className="w-full py-3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-white rounded-lg font-medium hover:opacity-90 transition-all"
+                                className="w-full py-3 cursor-pointer bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-white rounded-lg font-medium hover:opacity-90 transition-all"
                             >
                                 Send Message
                             </button>

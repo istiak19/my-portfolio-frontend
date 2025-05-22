@@ -22,7 +22,7 @@ const skills = [
     { icon: <FaNode className="w-full h-full p-5 text-[#339933]" />, label: "Node.js", color: "#339933" },
     { icon: <SiMongodb className="w-full h-full p-5 text-[#47A248]" />, label: "MongoDB", color: "#47A248" },
     { icon: <SiPostgresql className="w-full h-full p-5 text-[#336791]" />, label: "PostgreSQL", color: "#336791" },
-    { icon: <FaGithub className="w-full h-full p-5 text-[#F05033]" />, label: "GitHub", color: "#F05033" },
+    { icon: <FaGithub className="w-full h-full p-5 text-white" />, label: "GitHub", color: "#F05033" },
 ];
 
 const container = {
