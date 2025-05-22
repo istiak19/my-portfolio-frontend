@@ -41,7 +41,7 @@ const Banner = () => {
             rel: "noopener noreferrer"
         },
         {
-            title: "Mail",
+            title: "Email",
             icon: <MdMail />,
             href: "mailto:istiakanik79@gmail.com",
             target: "_blank",

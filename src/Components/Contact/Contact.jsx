@@ -31,7 +31,7 @@ const Contact = () => {
             href: "https://www.linkedin.com/in/istiak-ahamed-0619at/",
         },
         {
-            title: "Mail",
+            title: "Email",
             icon: <MdMail />,
             href: "mailto:istiakanik79@gmail.com",
         },

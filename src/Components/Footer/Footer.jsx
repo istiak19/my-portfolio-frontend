@@ -17,7 +17,7 @@ const Footer = () => {
                 {/* Social Icons */}
                 <div className="flex gap-6 text-2xl">
                     <a
-                        href="https://github.com/istiakahamed"
+                        href="https://github.com/istiak19"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition duration-300"
@@ -25,7 +25,7 @@ const Footer = () => {
                         <FaGithub />
                     </a>
                     <a
-                        href="https://linkedin.com/in/istiakahamed"
+                        href="https://www.linkedin.com/in/istiak-ahamed-0619at"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition duration-300"
@@ -33,7 +33,7 @@ const Footer = () => {
                         <FaLinkedin />
                     </a>
                     <a
-                        href="mailto:istiak@example.com"
+                        href="mailto:istiakanik79@gmail.com"
                         className="hover:text-white transition duration-300"
                     >
                         <FaEnvelope />
