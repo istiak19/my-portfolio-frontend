@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Cover } from "../ui/cover";
+import { Cover } from "../ui/Cover/cover";
 import anikPic from "../../../public/Anik.jpg";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
-import { FloatingDock } from "../ui/floating-dock";
-import { Meteors } from "../ui/meteors";
+import { FloatingDock } from "../ui/FloatingDock/floating-dock";
+import { Meteors } from "../ui/Meteors/meteors";
 
 const Banner = () => {
     const resumeViewLink =
@@ -83,21 +83,19 @@ const Banner = () => {
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-11/12 mx-auto px-6 py-16 relative z-10">
                 {/* Left Section */}
                 <div className="lg:w-1/2 space-y-4 md:space-y-6 relative z-20">
-                    <h1 className="text-xl md:text-2xl font-semibold text-gray-300 mb-2 tracking-wide">
-                        Hello, I&apos;m <span className="text-white font-bold">Istiak Ahamed</span>
+                    <h1 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-3 tracking-wide leading-snug">
+                        Hi, I&apos;m <span className="text-white font-extrabold">Istiak Ahamed</span>
                     </h1>
-
                     <h2 className="text-4xl md:text-6xl font-bold leading-tight">
                         <Cover>
                             <span className="inline-block bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
-                                FrontEnd Developer
+                                Front-End Developer
                             </span>
                         </Cover>
                     </h2>
                     <p className="text-sm md:text-base leading-relaxed text-gray-300 text-justify">
-                        I am a dedicated and results-driven web developer with a strong passion for learning and growth. I thrive in dynamic environments, efficiently manage multiple tasks, and consistently deliver high-quality outcomes. My ability to adapt quickly to new technologies allows me to stay ahead in the ever-evolving tech landscape.
+                        I’m a passionate web developer focused on creating clean, responsive, and user-friendly websites. I enjoy learning new technologies, adapting quickly, and always aim to deliver high-quality work on time. I thrive in dynamic environments and love solving problems through code.
                     </p>
-
                     <div>
                         <FloatingDock mobileClassName="translate-y-22" items={links} />
                         <div className="md:hidden">

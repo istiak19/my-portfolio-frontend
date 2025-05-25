@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+body {
+  font-family: var(--font-roboto);
+}
+
 /* Banner dot */
 .bg-dot-pattern {
   background-image: radial-gradient(circle, #d28faf 1px, transparent 1px);

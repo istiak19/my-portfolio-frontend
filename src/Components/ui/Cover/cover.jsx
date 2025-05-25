@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { SparklesCore } from "./sparkles";
+import { SparklesCore } from "../Sparkles/sparkles";
 
 export const Cover = ({ children, className }) => {
     const [hovered, setHovered] = useState(false);

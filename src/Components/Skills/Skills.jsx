@@ -8,7 +8,7 @@ import { BiLogoFirebase } from "react-icons/bi";
 import {
     SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql
 } from "react-icons/si";
-import { BackgroundLines } from "../ui/background-lines";
+import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
 import { motion } from "framer-motion";
 
 const Skills = () => {

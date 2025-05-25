@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { SparklesCore } from '../ui/sparkles';
+import { SparklesCore } from '../ui/Sparkles/sparkles';
 
 import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';

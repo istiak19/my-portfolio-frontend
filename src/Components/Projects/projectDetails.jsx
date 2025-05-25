@@ -9,7 +9,7 @@ import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
 import fundProject from '../../../public/project/fundProject.png';
-import { BackgroundBeams } from "../ui/background-beams";
+import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
 const ProjectDetails = ({ id }) => {
     const projects = [

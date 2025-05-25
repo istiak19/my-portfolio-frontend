@@ -1,16 +1,12 @@
 import Footer from "@/Components/Footer/Footer";
 import "./globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const inter = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -22,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased`}>
+      <body className={`${roboto.variable} font-sans antialiased`}>
         <Navbar />
         {children}
         <Footer />
