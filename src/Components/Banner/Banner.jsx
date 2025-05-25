@@ -76,7 +76,7 @@ const Banner = () => {
 
             {/* Background Dots  */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute top-1/8 left-20 w-full h-3/4 bg-dot-pattern opacity-30 mask-left-to-right-fade"></div>
+                <div className="absolute top-1/8 left-20 w-full h-3/4 bg-dot-pattern opacity-20 mask-left-to-right-fade"></div>
             </div>
 
             {/* Main Content */}
@@ -158,11 +158,12 @@ const Banner = () => {
                     {/* Add Meteors Component */}
                     <Meteors number={4} />
                     {/* Stylish Profile Image */}
-                    <figure className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-[40%_60%_70%_30%/30%_40%_60%_70%] border-4 border-fuchsia-500 shadow-2xl animate-float-slow">
+                    <figure className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl border-[2px] border-fuchsia-600/50 shadow-3xl backdrop-blur-md bg-fuchsia-500 overflow-hidden ring-1 ring-fuchsia-500/10 hover:scale-105 transition-transform duration-500 ease-in-out animate-float-slow">
                         <Image
                             src={anikPic}
-                            alt="User Image"
+                            alt="Istiak Ahamed's profile"
                             fill
+                            className="grayscale-0 hover:grayscale transition-all duration-500 ease-in-out"
                         />
                     </figure>
 
