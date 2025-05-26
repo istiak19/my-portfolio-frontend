@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-black/70 border-b border-fuchsia-500 dark:border-gray-700 shadow-sm">
-            <nav className="flex items-center justify-between px-6 md:px-0.5 py-3 w-11/12 mx-auto">
+            <nav className="flex items-center justify-between px-3 md:px-0.5 py-3 w-11/12 mx-auto">
                 {/* Left side */}
                 <Link href="/" className="flex items-center group">
                     <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform duration-200">
