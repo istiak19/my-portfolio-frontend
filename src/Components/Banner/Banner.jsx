@@ -4,10 +4,11 @@ import Image from "next/image";
 import { Cover } from "../ui/Cover/cover";
 import anikPic from "../../../public/Anik.jpg";
 import { IoCloudDownloadOutline } from "react-icons/io5";
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { FloatingDock } from "../ui/FloatingDock/floating-dock";
 import { Meteors } from "../ui/Meteors/meteors";
+import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
     const resumeViewLink =
@@ -67,6 +68,13 @@ const Banner = () => {
             href: "https://wa.me/8801794270067",
             target: "_blank",
             rel: "noopener noreferrer"
+        },
+        {
+            title: "Telegram",
+            icon: <FaTelegramPlane />,
+            href: "https://t.me/+8801794270067",
+            target: "_blank",
+            rel: "noopener noreferrer"
         }
     ];
 
@@ -83,13 +91,26 @@ const Banner = () => {
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-11/12 mx-auto px-6 py-16 relative z-10">
                 {/* Left Section */}
                 <div className="lg:w-1/2 space-y-4 md:space-y-6 relative z-20">
-                    <h1 className="text-2xl md:text-3xl font-semibold text-gray-200 mb-3 tracking-wide leading-snug">
-                        Hi, I&apos;m <span className="text-white font-extrabold">Istiak Ahamed</span>
+                    <h1 className="text-2xl md:text-3xl text-gray-300 mb-3 tracking-wide leading-snug">
+                        Hi there!, I&apos;m <span className="text-white font-semibold">Istiak Ahamed</span>
                     </h1>
                     <h2 className="text-3xl md:text-6xl font-bold leading-tight">
                         <Cover>
                             <span className="inline-block bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient pt-5 md:pt-1">
-                                Front-End Developer
+                                <Typewriter
+                                    words={[
+                                        'Junior Web Developer',
+                                        'Front-End Developer',
+                                        'MERN Stack Developer',
+                                        'Full Stack Developer'
+                                    ]}
+                                    loop={0}
+                                    cursor
+                                    cursorStyle="_"
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
                             </span>
                         </Cover>
                     </h2>
@@ -156,7 +177,7 @@ const Banner = () => {
                     {/* Add Meteors Component */}
                     <Meteors number={4} />
                     {/* Stylish Profile Image */}
-                    <figure className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl border-[2px] border-fuchsia-600/50 shadow-3xl backdrop-blur-md bg-fuchsia-500 overflow-hidden ring-1 ring-fuchsia-500/10 hover:scale-105 transition-transform duration-500 ease-in-out animate-float-slow">
+                    <figure className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-[2px] border-fuchsia-600/50 shadow-3xl backdrop-blur-md bg-fuchsia-500 overflow-hidden ring-1 ring-fuchsia-500/10 hover:scale-105 transition-transform duration-500 ease-in-out animate-float-slow">
                         <Image
                             src={anikPic}
                             alt="Istiak Ahamed's profile"
@@ -188,7 +209,7 @@ const Banner = () => {
                         <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                             Build Solutions. Drive Impact.
                         </span>
-                        <span className="w-40 h-[1px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></span>
+                        <span className="w-36 h-[1px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></span>
                     </h1>
                 </div>
             </div>

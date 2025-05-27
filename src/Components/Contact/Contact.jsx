@@ -2,7 +2,7 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { FloatingDock } from "../ui/FloatingDock/floating-dock";
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
@@ -50,6 +50,11 @@ const Contact = () => {
             icon: <FaWhatsapp />,
             href: "https://wa.me/8801794270067",
         },
+        {
+            title: "Telegram",
+            icon: <FaTelegramPlane />,
+            href: "https://t.me/+8801794270067",
+        }
     ];
 
     return (
@@ -99,9 +104,11 @@ const Contact = () => {
                                     <Phone className="text-indigo-400" />
                                     <span>+8801794270067</span>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                    <IoLogoWhatsapp className="text-fuchsia-400 text-xl" />
-                                    <span>+8801794270067</span>
+                                <div className="flex items-center gap-2 text-fuchsia-400 text-xl">
+                                    <IoLogoWhatsapp title="WhatsApp" />
+                                    <span>/</span>
+                                    <FaTelegramPlane title="Telegram" />
+                                    <span className="text-gray-200 text-base ml-2">+8801794270067</span>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <MapPin className="text-pink-400" />
