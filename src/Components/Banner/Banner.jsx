@@ -94,7 +94,7 @@ const Banner = () => {
                     <h1 className="text-2xl md:text-3xl text-gray-300 mb-3 tracking-wide leading-snug">
                         Hi there!, I&apos;m <span className="text-white font-semibold">Istiak Ahamed</span>
                     </h1>
-                    <h2 className="text-3xl md:text-6xl font-bold leading-tight">
+                    <h2 className="text-2xl md:text-5xl font-semibold md:font-bold  leading-tight">
                         <Cover>
                             <span className="inline-block bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient pt-5 md:pt-1">
                                 <Typewriter
