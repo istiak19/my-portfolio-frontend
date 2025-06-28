@@ -1,6 +1,6 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
     return (

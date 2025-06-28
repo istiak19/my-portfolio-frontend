@@ -1,12 +1,12 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
-import { IoLogoWhatsapp } from "react-icons/io5";
-import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { MdMail } from "react-icons/md";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { FloatingDock } from "../ui/FloatingDock/floating-dock";
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
-import { motion } from "framer-motion";
+import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 // Animation variants
 const fadeUp = {

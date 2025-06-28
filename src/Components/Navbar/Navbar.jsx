@@ -1,18 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import logo from "../../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
-import Image from "next/image";
-import logo from "../../../public/logo.png";
-import { useState } from "react";
+import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
 
 const Navbar = () => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-
     const isActive = (path) => pathname === path;
-
     const navLinks = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
@@ -66,6 +65,9 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
+
+                    {/* Theme Change Button */}
+                    <ModeToggle />
 
                     {/* Resume Button (Desktop only) */}
                     <button

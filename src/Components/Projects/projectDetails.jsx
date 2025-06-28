@@ -1,14 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight } from 'lucide-react';
-import Link from "next/link";
-import { motion } from "framer-motion";
-import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
 import fundProject from '../../../public/project/fundProject.png';
+import bloodProject from '../../../public/project/BloodProject.png';
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
 const ProjectDetails = ({ id }) => {

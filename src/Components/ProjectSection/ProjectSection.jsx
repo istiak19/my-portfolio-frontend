@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
+import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import bloodProject from '../../../public/project/BloodProject.png';
 import eduGenie from '../../../public/project/eduGenie.png';
 import fundProject from '../../../public/project/fundProject.png';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import bloodProject from '../../../public/project/BloodProject.png';
 
 const projects = [
     {

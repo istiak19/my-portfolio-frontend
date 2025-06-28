@@ -1,14 +1,10 @@
 "use client";
 
-import {
-    FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3
-} from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { BiLogoFirebase } from "react-icons/bi";
-import {
-    SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql
-} from "react-icons/si";
 import { motion } from "framer-motion";
+import { BiLogoFirebase } from "react-icons/bi";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
+import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql } from "react-icons/si";
 
 const skills = [
     { icon: <FaHtml5 className="w-full h-full p-5 text-[#E34F26]" />, label: "HTML5", color: "#E34F26" },

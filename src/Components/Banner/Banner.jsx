@@ -1,21 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { MdMail } from "react-icons/md";
 import { Cover } from "../ui/Cover/cover";
 import anikPic from "../../../public/Anik.jpg";
-import { IoCloudDownloadOutline } from "react-icons/io5";
-import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
-import { FloatingDock } from "../ui/FloatingDock/floating-dock";
 import { Meteors } from "../ui/Meteors/meteors";
 import { Typewriter } from 'react-simple-typewriter';
+import { IoCloudDownloadOutline } from "react-icons/io5";
+import { FloatingDock } from "../ui/FloatingDock/floating-dock";
+import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Banner = () => {
-    const resumeViewLink =
-        "https://drive.google.com/file/d/18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5/view?usp=sharing";
-    const resumeDownloadLink =
-        "https://drive.google.com/uc?export=download&id=18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5";
-
+    const resumeViewLink = "https://drive.google.com/file/d/18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5/view?usp=sharing";
+    const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5";
     const handleResumeDownload = () => {
         window.open(resumeViewLink, "_blank");
         const link = document.createElement("a");

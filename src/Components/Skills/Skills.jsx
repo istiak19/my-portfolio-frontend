@@ -1,15 +1,11 @@
 "use client";
 
-import {
-    FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3
-} from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { BiLogoFirebase } from "react-icons/bi";
-import {
-    SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql
-} from "react-icons/si";
-import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
 import { motion } from "framer-motion";
+import { BiLogoFirebase } from "react-icons/bi";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
+import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
+import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql } from "react-icons/si";
 
 const Skills = () => {
     const skills = [

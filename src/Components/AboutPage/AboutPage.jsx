@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaPlane, FaUtensils, FaBookOpen, FaCamera } from "react-icons/fa";
 import profileImg from "../../../public/Anik.jpg";
+import { FaPlane, FaUtensils, FaBookOpen, FaCamera } from "react-icons/fa";
 import { BackgroundBeamsWithCollision } from "../ui/BackgroundBeamsWithCollision/background-beams-with-collision";
 
 const AboutPage = () => {
