@@ -96,9 +96,9 @@ const Banner = () => {
                             <span className="inline-block bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient pt-5 md:pt-1">
                                 <Typewriter
                                     words={[
-                                        'Junior Web Developer',
                                         'Front-End Developer',
                                         'MERN Stack Developer',
+                                        'Junior Web Developer',
                                         'Full Stack Developer'
                                     ]}
                                     loop={0}

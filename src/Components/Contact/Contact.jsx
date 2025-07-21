@@ -129,20 +129,22 @@ const Contact = () => {
                                     }))}
                                 />
                                 <div className="md:hidden mt-4 flex gap-2 flex-wrap">
-                                    {links.map((link, i) => (
-                                        <motion.a
-                                            key={link.title}
-                                            href={link.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={link.title}
-                                            variants={fadeUp}
-                                            custom={i + 2}
-                                            className="border-2 border-fuchsia-500 p-2 rounded-full text-xl hover:text-indigo-400 transition-colors"
-                                        >
-                                            {link.icon}
-                                        </motion.a>
-                                    ))}
+                                    {
+                                        links.map((link, i) => (
+                                            <motion.a
+                                                key={link.title}
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={link.title}
+                                                variants={fadeUp}
+                                                custom={i + 2}
+                                                className="border-2 border-fuchsia-500 p-2 rounded-full text-xl hover:text-indigo-400 transition-colors"
+                                            >
+                                                {link.icon}
+                                            </motion.a>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

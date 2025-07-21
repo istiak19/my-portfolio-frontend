@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { BiLogoFirebase } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql } from "react-icons/si";
+import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux } from "react-icons/si";
 
 const skills = [
     { icon: <FaHtml5 className="w-full h-full p-5 text-[#E34F26]" />, label: "HTML5", color: "#E34F26" },
     { icon: <FaCss3 className="w-full h-full p-5 text-[#1572B6]" />, label: "CSS3", color: "#1572B6" },
-    { icon: <RiTailwindCssFill className="w-full h-full p-5 text-[#38BDF8]" />, label: "Tailwind", color: "#38BDF8" },
+    { icon: <RiTailwindCssFill className="w-full h-full p-5 text-[#38BDF8]" />, label: "TailwindCSS", color: "#38BDF8" },
     { icon: <FaJs className="w-full h-full p-5 text-[#F7DF1E]" />, label: "JavaScript", color: "#F7DF1E" },
     { icon: <FaReact className="w-full h-full p-5 text-[#61DAFB]" />, label: "React.js", color: "#61DAFB" },
     { icon: <SiNextdotjs className="w-full h-full p-5 text-white" />, label: "Next.js", color: "" },
@@ -17,7 +17,10 @@ const skills = [
     { icon: <BiLogoFirebase className="w-full h-full p-5 text-[#FFA000]" />, label: "Firebase", color: "#FFA000" },
     { icon: <FaNode className="w-full h-full p-5 text-[#339933]" />, label: "Node.js", color: "#339933" },
     { icon: <SiMongodb className="w-full h-full p-5 text-[#47A248]" />, label: "MongoDB", color: "#47A248" },
+    { icon: <SiMongoose className="w-full h-full p-5 text-[#800000]" />, label: "Mongoose", color: "#800000" },
     { icon: <SiPostgresql className="w-full h-full p-5 text-[#336791]" />, label: "PostgreSQL", color: "#336791" },
+    { icon: <SiRadixui className="w-full h-full p-5 text-[#61DAFB]" />, label: "shadcn/ui", color: "#61DAFB" },
+    { icon: <SiRedux className="w-full h-full p-5 text-[#764ABC]" />, label: "Redux", color: "#764ABC" },
     { icon: <FaGithub className="w-full h-full p-5 text-white" />, label: "GitHub", color: "#F05033" },
 ];
 
@@ -63,27 +66,29 @@ const SkillSection = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 justify-items-center mt-5"
+                    className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4 justify-items-center mt-5"
                 >
-                    {skills.map((skill, idx) => (
-                        <motion.div key={idx} variants={item} className="flex flex-col items-center">
-                            <div
-                                className="w-20 h-20 rounded-2xl p-[2px] bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500
+                    {
+                        skills.map((skill, idx) => (
+                            <motion.div key={idx} variants={item} className="flex flex-col items-center cursor-pointer">
+                                <div
+                                    className="w-20 h-20 rounded-2xl p-[2px] bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500
                                 bg-[length:200%_200%] animate-borderSpin transform hover:scale-110 transition-all duration-300 
                                 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] shiny"
-                            >
-                                <div className="w-full h-full bg-white dark:bg-black rounded-2xl flex items-center justify-center">
-                                    {skill.icon}
+                                >
+                                    <div className="w-full h-full bg-white dark:bg-black rounded-2xl flex items-center justify-center">
+                                        {skill.icon}
+                                    </div>
                                 </div>
-                            </div>
-                            <h2
-                                className={`text-sm font-semibold pt-2 text-center ${skill.label === "Next.js" ? "text-black dark:text-white" : ""}`}
-                                style={{ color: skill.label !== "Next.js" ? skill.color : undefined }}
-                            >
-                                {skill.label}
-                            </h2>
-                        </motion.div>
-                    ))}
+                                <h2
+                                    className={`text-sm font-semibold pt-2 text-center ${skill.label === "Next.js" ? "text-black dark:text-white" : ""}`}
+                                    style={{ color: skill.label !== "Next.js" ? skill.color : undefined }}
+                                >
+                                    {skill.label}
+                                </h2>
+                            </motion.div>
+                        ))
+                    }
                 </motion.div>
             </div>
         </section>

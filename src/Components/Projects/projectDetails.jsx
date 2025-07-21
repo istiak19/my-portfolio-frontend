@@ -106,7 +106,7 @@ const ProjectDetails = ({ id }) => {
 
     if (!project) {
         return <div className="p-6 text-red-600 text-center font-semibold">Project not found.</div>;
-    }
+    };
 
     return (
         <motion.div
@@ -153,39 +153,45 @@ const ProjectDetails = ({ id }) => {
                 </section>
 
                 <div className="flex flex-wrap gap-4 justify-center mt-8">
-                    {project.liveLink && (
-                        <Link
-                            href={project.liveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
-                        >
-                            <span>Live Site</span>
-                            <ArrowUpRight className="text-indigo-500" />
-                        </Link>
-                    )}
-                    {project.clientLink && (
-                        <Link
-                            href={project.clientLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
-                        >
-                            <span>Client Repo</span>
-                            <FaGithub className="text-indigo-500" />
-                        </Link>
-                    )}
-                    {project.serverLink && (
-                        <Link
-                            href={project.serverLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
-                        >
-                            <FaGithub className="text-indigo-500" />
-                            <span>Server Repo</span>
-                        </Link>
-                    )}
+                    {
+                        project.liveLink && (
+                            <Link
+                                href={project.liveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
+                            >
+                                <span>Live Site</span>
+                                <ArrowUpRight className="text-indigo-500" />
+                            </Link>
+                        )
+                    }
+                    {
+                        project.clientLink && (
+                            <Link
+                                href={project.clientLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
+                            >
+                                <span>Client Repo</span>
+                                <FaGithub className="text-indigo-500" />
+                            </Link>
+                        )
+                    }
+                    {
+                        project.serverLink && (
+                            <Link
+                                href={project.serverLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-2 px-5 py-2 rounded-full font-medium border border-emerald-500/30 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 backdrop-blur-md shadow-md hover:shadow-lg transition"
+                            >
+                                <FaGithub className="text-indigo-500" />
+                                <span>Server Repo</span>
+                            </Link>
+                        )
+                    }
                 </div>
 
                 <section>
@@ -200,25 +206,31 @@ const ProjectDetails = ({ id }) => {
                         Features
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-lg">
-                        {project.features.map((feature, idx) => (
-                            <li key={idx} className="hover:text-indigo-600 transition-colors duration-300">{feature}</li>
-                        ))}
+                        {
+                            project.features.map((feature, idx) => (
+                                <li key={idx} className="hover:text-indigo-600 transition-colors duration-300">{feature}</li>
+                            ))
+                        }
                     </ul>
                 </section>
 
-                {project.challenges && (
-                    <section>
-                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-red-600 border-b-2 border-red-500 inline-block dark:text-red-400">Challenges</h2>
-                        <p className="text-gray-600 dark:text-gray-400">{project.challenges}</p>
-                    </section>
-                )}
+                {
+                    project.challenges && (
+                        <section>
+                            <h2 className="text-2xl font-semibold mt-6 mb-2 text-red-600 border-b-2 border-red-500 inline-block dark:text-red-400">Challenges</h2>
+                            <p className="text-gray-600 dark:text-gray-400">{project.challenges}</p>
+                        </section>
+                    )
+                }
 
-                {project.improvements && (
-                    <section>
-                        <h2 className="text-2xl font-semibold mt-6 mb-2 text-green-600 border-b-2 inline-block border-red-500 dark:text-green-400">Improvements</h2>
-                        <p className="text-gray-600 dark:text-gray-400">{project.improvements}</p>
-                    </section>
-                )}
+                {
+                    project.improvements && (
+                        <section>
+                            <h2 className="text-2xl font-semibold mt-6 mb-2 text-green-600 border-b-2 inline-block border-red-500 dark:text-green-400">Improvements</h2>
+                            <p className="text-gray-600 dark:text-gray-400">{project.improvements}</p>
+                        </section>
+                    )
+                }
             </motion.div>
             <BackgroundBeams />
         </motion.div>

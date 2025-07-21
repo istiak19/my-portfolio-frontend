@@ -7,7 +7,7 @@ import { Moon, Sun } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../dropdown-menu";
 
 export function ModeToggle() {
-    const { setTheme } = useTheme()
+    const { setTheme } = useTheme();
 
     return (
         <DropdownMenu>
@@ -15,7 +15,7 @@ export function ModeToggle() {
                 <Button
                     variant="outline"
                     size="icon"
-                    className="relative transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="relative transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
                 >
                     <Sun
                         className="h-[1.2rem] w-[1.2rem] transition-transform duration-500 scale-100 rotate-0 dark:scale-0 dark:-rotate-90"
@@ -39,4 +39,4 @@ export function ModeToggle() {
             </DropdownMenuContent>
         </DropdownMenu>
     )
-}
+};

@@ -67,7 +67,7 @@ const Navbar = () => {
                     </ul>
 
                     {/* Theme Change Button */}
-                    <ModeToggle />
+                    <ModeToggle className="cursor-pointer" />
 
                     {/* Resume Button (Desktop only) */}
                     <button
@@ -105,37 +105,39 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Dropdown Menu */}
-            {isOpen && (
-                <ul className="md:hidden flex flex-col items-start gap-3 px-6 py-4 bg-[#292637] text-white shadow-lg">
-                    {navLinks.map((link) => (
-                        <li key={link.path} className="w-full">
-                            <Link
-                                href={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className={`block w-full py-1 ${isActive(link.path)
-                                    ? "text-blue-500 font-semibold"
-                                    : "hover:text-blue-400"
-                                    }`}
+            {
+                isOpen && (
+                    <ul className="md:hidden flex flex-col items-start gap-3 px-6 py-4 bg-[#292637] text-white shadow-lg">
+                        {navLinks.map((link) => (
+                            <li key={link.path} className="w-full">
+                                <Link
+                                    href={link.path}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`block w-full py-1 ${isActive(link.path)
+                                        ? "text-blue-500 font-semibold"
+                                        : "hover:text-blue-400"
+                                        }`}
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                        <li className="w-full pt-2">
+                            <button
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    handleResumeDownload();
+                                }}
+                                className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                             >
-                                {link.name}
-                            </Link>
+                                <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                                <span className="font-medium">Download Resume</span>
+                                <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                            </button>
                         </li>
-                    ))}
-                    <li className="w-full pt-2">
-                        <button
-                            onClick={() => {
-                                setIsOpen(false);
-                                handleResumeDownload();
-                            }}
-                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
-                        >
-                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
-                            <span className="font-medium">Download Resume</span>
-                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
-                        </button>
-                    </li>
-                </ul>
-            )}
+                    </ul>
+                )
+            }
         </header>
     );
 };
