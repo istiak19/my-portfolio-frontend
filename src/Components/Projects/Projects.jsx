@@ -10,31 +10,39 @@ import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
 import fundProject from '../../../public/project/fundProject.png';
 import bloodProject from '../../../public/project/BloodProject.png';
+import nirapodParcel from '../../../public/project/nirapod.png';
 
 const projects = [
     {
         id: 1,
+        title: 'Nirapod Parcel',
+        image: nirapodParcel,
+        viewLink: 'https://nirapod-parcel.netlify.app/',
+        githubLink: 'https://github.com/istiak19/Nirapod-Parcel-Frontend',
+    },
+    {
+        id: 2,
         title: 'BloodBanker',
         image: bloodProject,
         viewLink: 'https://bloodbanker-567f0.web.app/',
         githubLink: 'https://github.com/istiak19/BloodBanker-client',
     },
     {
-        id: 2,
+        id: 3,
         title: 'EduGenie',
         image: eduGenie,
         viewLink: 'https://genies-two.vercel.app/',
         githubLink: 'https://github.com/imtiaz-zihad/Edugenie/tree/development',
     },
     {
-        id: 3,
+        id: 4,
         title: 'EduCircle',
         image: eduProject,
         viewLink: 'https://educircle-839d0.web.app/',
         githubLink: 'https://github.com/istiak19/EduCircle-client',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Fundsphere',
         image: fundProject,
         viewLink: 'https://fundsphere-website.web.app/',
@@ -97,7 +105,7 @@ const Projects = () => {
                                             src={project.image}
                                             alt={`${project.title} preview`}
                                             fill
-                                            className="rounded-xl p-2 object-cover transition-transform duration-500 group-hover:scale-110"
+                                            className="rounded-xl p-2 transition-transform duration-500 group-hover:scale-110"
                                             priority
                                         />
                                     </div>

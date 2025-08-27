@@ -9,12 +9,32 @@ import eduGenie from '../../../public/project/eduGenie.png';
 import eduProject from '../../../public/project/eduProject.png';
 import fundProject from '../../../public/project/fundProject.png';
 import bloodProject from '../../../public/project/BloodProject.png';
+import nirapodParcel from '../../../public/project/nirapod.png';
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
 const ProjectDetails = ({ id }) => {
     const projects = [
         {
             id: 1,
+            name: "Nirapod Parcel",
+            image: nirapodParcel,
+            technologies: "React.js, Redux, TypeScript, Redis, Passport.js, Node.js, Express.js, Mongoose, MongoDB",
+            description: "Nirapod Parcel is a robust, role-based React application built with TypeScript, Redux Toolkit, and RTK Query, designed to provide a seamless and secure parcel management experience. It features dynamic dashboards, visual analytics, and responsive UI tailored for Senders, Receivers, and Admins. Users can track parcels, manage deliveries, update statuses, and view detailed logs in real time. With role-specific navigation, API integration, and accessibility-focused design, Nirapod delivers a professional, user-friendly, and performant solution for modern parcel delivery operations.",
+            // challenges: "Seamlessly connecting the platform with local blood banks for real-time updates.",
+            improvements: "Rider assignment using smart allocation for faster, more efficient deliveries. Integrated payment tracking ensures timely, transparent payouts to delivery partners with minimal errors",
+            clientLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
+            serverLink: "https://github.com/istiak19/Nirapod-Parcel-Backend",
+            liveLink: "https://nirapod-parcel.netlify.app/",
+            features: [
+                "Role-based dashboards (Sender, Receiver, Admin).",
+                "Real-time parcel tracking.",
+                "Delivery status updates & logs.",
+                "Secure authentication & role switching.",
+                "Analytics & reporting with charts."
+            ]
+        },
+        {
+            id: 2,
             name: "BloodBanker",
             image: bloodProject,
             technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase",
@@ -38,7 +58,7 @@ const ProjectDetails = ({ id }) => {
             ]
         },
         {
-            id: 2,
+            id: 3,
             name: "EduGenie",
             image: eduGenie,
             technologies: "Next.js, NextAuth.js, Tailwind CSS, Node.js, Express.js, MongoDB",
@@ -62,7 +82,7 @@ const ProjectDetails = ({ id }) => {
             ]
         },
         {
-            id: 3,
+            id: 4,
             name: "EduCircle",
             image: eduProject,
             technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
@@ -82,7 +102,7 @@ const ProjectDetails = ({ id }) => {
             ]
         },
         {
-            id: 4,
+            id: 5,
             name: "Fundsphere",
             image: fundProject,
             technologies: "React.js, Node.js, MongoDB, Express.js, Tailwind CSS, Firebase, DaisyUI",
