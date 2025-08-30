@@ -10,7 +10,7 @@ const AboutPage = () => {
     return (
         <div className="bg-black">
             <BackgroundBeamsWithCollision>
-                <div className="w-11/12 mx-auto  px-6 py-16">
+                <div className="container mx-auto  px-6 py-16">
                     <h2 className="text-4xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-8">About Me</h2>
                     <div className="text-white flex flex-col md:flex-row justify-center gap-8">
                         <motion.div
@@ -35,24 +35,31 @@ const AboutPage = () => {
                             initial={{ x: 100, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="max-w-5xl"
+                            className="max-w-6xl"
                         >
                             <p className="text-gray-300 text-justify text-lg leading-relaxed">
                                 I’m Istiak Ahamed, a passionate and detail-oriented{" "}
-                                <span className="text-purple-400 font-semibold">Frontend Developer</span> who loves building modern, responsive, and user-friendly web applications. I’m always eager to learn new technologies, take on challenges, and deliver impactful digital experiences.
+                                <span className="text-purple-400 font-semibold">Front-End Developer</span> who loves building modern, responsive, and user-friendly web applications. I’m always eager to learn new technologies, take on challenges, and deliver impactful digital experiences.
                             </p>
 
                             <div className="mt-6">
                                 {/* <h3 className="text-xl font-semibold mb-2">🧰 My Tech Toolbox:</h3> */}
                                 <ul className="list-disc pl-5 space-y-1 text-gray-300">
                                     <li>
-                                        <strong>Frontend:</strong> HTML5, CSS3, Tailwind CSS, JavaScript, React.js, Next.js, TypeScript
+                                        <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS, ShadCN, Material
+ UI, Bootstrap, Axios, TanStack Query
                                     </li>
                                     <li>
-                                        <strong>Backend:</strong> Node.js, Express.js, Firebase
+                                        <strong>Backend:</strong> Node.js, Express.js, Mongoose, RESTful APIs, JWT, NextAuth.js, Firebase
                                     </li>
                                     <li>
                                         <strong>Database:</strong> MongoDB
+                                    </li>
+                                    <li>
+                                        <strong>Tools & Platforms:</strong> Git, GitHub, Chrome DevTools, Postman, Vercel, Netlify, Figma, VS Code, CodeBlocks
+                                    </li>
+                                    <li>
+                                        <strong> Soft Skills:</strong>  Quick Learning, Teamwork & Collaboration, Time Management, Effective Communication
                                     </li>
                                 </ul>
                             </div>

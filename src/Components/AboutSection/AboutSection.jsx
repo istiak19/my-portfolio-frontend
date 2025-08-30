@@ -21,7 +21,7 @@ const textVariant = {
 const AboutSection = () => {
     return (
         <section className="bg-black">
-            <section className="w-11/12 mx-auto text-gray-300 py-10 px-6 md:px-0.5 flex flex-col lg:flex-row items-center justify-center gap-10">
+            <section className="container mx-auto text-gray-300 py-10 px-6 md:px-4 flex flex-col lg:flex-row items-center justify-center gap-10">
                 {/* Profile Image */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}

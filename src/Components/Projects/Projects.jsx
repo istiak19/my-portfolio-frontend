@@ -53,7 +53,7 @@ const projects = [
 const Projects = () => {
     return (
         <div className="bg-black text-white">
-            <div className="w-11/12 mx-auto py-16 px-4 md:px-6 text-center">
+            <div className="container mx-auto py-16 px-4 md:px-6 text-center">
                 {/* Header */}
                 <div className="flex flex-col items-center justify-center overflow-hidden rounded-md">
                     <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">

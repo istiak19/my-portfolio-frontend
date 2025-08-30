@@ -85,7 +85,7 @@ const Banner = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-11/12 mx-auto px-6 py-16 relative z-10">
+            <div className="flex flex-col-reverse lg:flex-row items-center justify-between container mx-auto px-6 py-16 relative z-10">
                 {/* Left Section */}
                 <div className="lg:w-1/2 space-y-4 md:space-y-6 relative z-20">
                     <h1 className="text-2xl md:text-3xl text-gray-300 mb-3 tracking-wide leading-snug">

@@ -6,37 +6,37 @@ import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import eduGenie from '../../../public/project/eduGenie.png';
-import fundProject from '../../../public/project/fundProject.png';
+import nirapodParcel from '../../../public/project/nirapod.png';
 import bloodProject from '../../../public/project/BloodProject.png';
 
 const projects = [
     {
         id: 1,
+        title: 'Nirapod Parcel',
+        image: nirapodParcel,
+        viewLink: 'https://nirapod-parcel.netlify.app/',
+        githubLink: 'https://github.com/istiak19/Nirapod-Parcel-Frontend',
+    },
+    {
+        id: 2,
         title: 'BloodBanker',
         image: bloodProject,
         viewLink: 'https://bloodbanker-567f0.web.app/',
         githubLink: 'https://github.com/istiak19/BloodBanker-client',
     },
     {
-        id: 2,
+        id: 3,
         title: 'EduGenie',
         image: eduGenie,
         viewLink: 'https://genies-two.vercel.app/',
         githubLink: 'https://github.com/imtiaz-zihad/Edugenie/tree/development',
-    },
-    {
-        id: 4,
-        title: 'Fundsphere',
-        image: fundProject,
-        viewLink: 'https://fundsphere-website.web.app/',
-        githubLink: 'https://github.com/istiak19/assignment-10-client',
-    },
+    }
 ];
 
 const ProjectSection = () => {
     return (
         <div className="bg-black">
-            <div className="w-11/12 mx-auto text-white py-10 px-6 text-center">
+            <div className="container mx-auto text-white py-10 px-6 text-center">
                 <h2 className="md:text-4xl text-2xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-5">
                     Creative & Technical Highlights
                 </h2>
@@ -66,7 +66,7 @@ const ProjectSection = () => {
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="rounded-xl p-2 object-cover transition-transform duration-500 group-hover:scale-110"
+                                            className="rounded-xl p-2 transition-transform duration-500 group-hover:scale-110"
                                             style={{ zIndex: 0 }}
                                         />
                                     </div>

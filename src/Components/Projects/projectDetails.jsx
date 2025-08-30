@@ -136,7 +136,7 @@ const ProjectDetails = ({ id }) => {
             transition={{ duration: 0.6 }}
         >
             <motion.div
-                className="w-11/12 mx-auto p-8 space-y-10 py-16"
+                className="container mx-auto p-8 space-y-10 py-16"
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}

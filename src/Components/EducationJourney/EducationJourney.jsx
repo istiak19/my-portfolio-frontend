@@ -10,7 +10,7 @@ const fadeUp = {
 const EducationJourney = () => {
     return (
         <div className="bg-black">
-            <div className="w-11/12 mx-auto text-gray-200 py-10 px-6">
+            <div className="container mx-auto text-gray-200 py-10 px-6">
                 <motion.h2
                     variants={fadeUp}
                     initial="hidden"
@@ -54,7 +54,8 @@ const EducationJourney = () => {
                         <span className="block">
                             CGPA: <span className="text-white/80 font-semibold">3.56 out of 4.00</span>
                         </span>
-                        <span className="block">Session: 2020 – 2024</span>
+                        <span className="block">Session: <span className="text-white/80 font-semibold">2019 – 2020</span>
+                        </span>
                     </p>
 
                     <p className="text-base text-gray-300 leading-relaxed text-justify">

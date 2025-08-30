@@ -59,7 +59,7 @@ const Contact = () => {
 
     return (
         <div className="bg-black text-white py-14 px-4 min-h-screen relative">
-            <div className="w-11/12 mx-auto px-4 md:px-6 z-10 relative">
+            <div className="container mx-auto px-4 md:px-6 z-10 relative">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

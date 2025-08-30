@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="relative bg-black text-gray-300 overflow-hidden py-10">
             {/* Glowing Divider Line */}
             <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent mb-6" />
-            <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 text-center px-4">
+            <div className="container mx-auto flex flex-col items-center gap-4 text-center px-4">
                 {/* Logo and Name */}
                 <div className="flex flex-col items-center gap-2">
                     <Image src={logo} alt="Logo" width={60} height={60} />

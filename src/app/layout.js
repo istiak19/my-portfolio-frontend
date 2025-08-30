@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.variable} font-sans antialiased`}>
         <ThemeProvider ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
           <Navbar />
