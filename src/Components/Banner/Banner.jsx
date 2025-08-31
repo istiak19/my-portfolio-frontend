@@ -6,13 +6,13 @@ import { Cover } from "../ui/Cover/cover";
 import anikPic from "../../../public/Anik.jpg";
 import { Meteors } from "../ui/Meteors/meteors";
 import { Typewriter } from 'react-simple-typewriter';
-import { IoCloudDownloadOutline } from "react-icons/io5";
+import { IoCloudDownloadOutline, IoEyeOutline } from "react-icons/io5";
 import { FloatingDock } from "../ui/FloatingDock/floating-dock";
 import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Banner = () => {
-    const resumeViewLink = "https://drive.google.com/file/d/18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5/view?usp=sharing";
-    const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=18PsJC-Kitq9x_GP-0aBVT7qQTWHiYKn5";
+    const resumeViewLink = "https://drive.google.com/file/d/1PAIOyIogLErxCFr4KkdZWZBoczIFT5uH/view?usp=sharing";
+    const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=1PAIOyIogLErxCFr4KkdZWZBoczIFT5uH";
     const handleResumeDownload = () => {
         window.open(resumeViewLink, "_blank");
         const link = document.createElement("a");
@@ -21,6 +21,10 @@ const Banner = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    };
+
+    const handleResumeView = () => {
+        window.open(resumeViewLink, "_blank");
     };
 
     const links = [
@@ -112,7 +116,10 @@ const Banner = () => {
                         </Cover>
                     </h2>
                     <p className="text-sm md:text-base leading-relaxed text-gray-300 text-justify">
-                        I’m a passionate web developer focused on creating clean, responsive, and user-friendly websites. I enjoy learning new technologies, adapting quickly, and always aim to deliver high-quality work on time. I thrive in dynamic environments and love solving problems through code.
+                        Energetic and reliable professional with a strong work ethic and the ability to quickly learn and adapt to new
+                        environments. Seeking a role where I can utilize my skills, gain valuable experience, and contribute to team
+                        goals in a fast-paced setting. Committed to delivering high-quality results while continuously growing both
+                        personally and professionally.
                     </p>
                     <div>
                         <FloatingDock mobileClassName="translate-y-22" items={links} />
@@ -164,6 +171,16 @@ const Banner = () => {
                         >
                             <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg] text-white hover:text-indigo-500" />
                             <span className="font-medium">Download Resume</span>
+                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                        </button>
+                        <button
+                            onClick={handleResumeView}
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient border border-emerald-500/30 bg-transparent backdrop-blur-md hover:text-indigo-500 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                        >
+                            <IoEyeOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg] text-white hover:text-indigo-500" />
+                            <span className="font-medium">
+                                View a Resume
+                            </span>
                             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </button>
                     </div>

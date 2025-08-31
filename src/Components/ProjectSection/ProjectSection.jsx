@@ -9,6 +9,19 @@ import eduGenie from '../../../public/project/eduGenie.png';
 import nirapodParcel from '../../../public/project/nirapod.png';
 import bloodProject from '../../../public/project/BloodProject.png';
 
+// Animation variants
+const textVariant = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 0) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.2,
+            duration: 0.6,
+        },
+    }),
+};
+
 const projects = [
     {
         id: 1,
@@ -36,7 +49,7 @@ const projects = [
 const ProjectSection = () => {
     return (
         <div className="bg-black">
-            <div className="container mx-auto text-white py-10 px-6 text-center">
+            <div className="container mx-auto text-white pt-10 px-6 text-center">
                 <h2 className="md:text-4xl text-2xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-5">
                     Creative & Technical Highlights
                 </h2>
@@ -111,6 +124,19 @@ const ProjectSection = () => {
                         ))
                     }
                 </div>
+
+                <motion.div
+                    variants={textVariant}
+                    custom={4}
+                    className="mt-16 flex justify-center"
+                >
+                    <Link href='/project'>
+                        <button className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient border border-emerald-500/30 bg-transparent backdrop-blur-md hover:text-indigo-500 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer">
+                            <span>See More →</span>
+                            <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+                        </button>
+                    </Link>
+                </motion.div>
             </div>
         </div>
     );

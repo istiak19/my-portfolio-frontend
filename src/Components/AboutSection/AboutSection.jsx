@@ -59,7 +59,8 @@ const AboutSection = () => {
                         custom={1}
                         className="text-lg mb-4 text-center lg:text-left"
                     >
-                        I’m Istiak Ahamed, a dedicated full-stack web developer with a strong focus on both frontend and backend technologies.
+                        Full-Stack Web Developer passionate about building scalable, user-friendly applications.
+                        Skilled in modern frontend & backend technologies, with a focus on clean and impactful solutions.
                     </motion.p>
 
                     <motion.ul
@@ -68,10 +69,10 @@ const AboutSection = () => {
                         className="list-disc pl-5 space-y-1"
                     >
                         <li>
-                            <strong>Frontend:</strong> HTML5, CSS3, Tailwind CSS, JavaScript, React.js, Next.js, TypeScript
+                            <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS, ShadCN, Material UI, Bootstrap, Axios, TanStack Query
                         </li>
                         <li>
-                            <strong>Backend:</strong> Node.js, Express.js, Firebase
+                            <strong>Backend:</strong> Node.js, Express.js, Mongoose, RESTful APIs, JWT, NextAuth.js, Firebase
                         </li>
                         <li>
                             <strong>Database:</strong> MongoDB

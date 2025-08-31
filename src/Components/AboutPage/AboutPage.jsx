@@ -46,8 +46,7 @@ const AboutPage = () => {
                                 {/* <h3 className="text-xl font-semibold mb-2">🧰 My Tech Toolbox:</h3> */}
                                 <ul className="list-disc pl-5 space-y-1 text-gray-300">
                                     <li>
-                                        <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS, ShadCN, Material
- UI, Bootstrap, Axios, TanStack Query
+                                        <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS, ShadCN, Material UI, Bootstrap, Axios, TanStack Query
                                     </li>
                                     <li>
                                         <strong>Backend:</strong> Node.js, Express.js, Mongoose, RESTful APIs, JWT, NextAuth.js, Firebase
