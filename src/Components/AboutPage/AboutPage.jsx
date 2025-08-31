@@ -17,7 +17,7 @@ const AboutPage = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6 }}
-                            className="relative w-[250px] h-[340px] md:w-[300px] md:h-[350px] bg-gradient-to-tr from-pink-500 to-purple-500 p-1 rounded-[30%]"
+                            className="relative w-[250px] flex-1 h-[340px] md:w-[350px] md:h-[350px] bg-gradient-to-tr from-pink-500 to-purple-500 p-1 rounded-[30%]"
                         >
                             <div className="w-full h-full rounded-[30%] overflow-hidden">
                                 <Image src={profileImg} alt="Istiak" className="w-full h-full" />
@@ -35,7 +35,7 @@ const AboutPage = () => {
                             initial={{ x: 100, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="max-w-6xl"
+                            className="flex-1/2"
                         >
                             <p className="text-gray-300 text-justify text-lg leading-relaxed">
                                 I’m Istiak Ahamed, a passionate and detail-oriented{" "}

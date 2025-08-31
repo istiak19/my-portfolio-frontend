@@ -1,12 +1,7 @@
-"use client";
-
 import { motion } from "framer-motion";
-import { MdMail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FloatingDock } from "../ui/FloatingDock/floating-dock";
-import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
-import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 
 // Animation variants
 const fadeUp = {
@@ -18,44 +13,7 @@ const fadeUp = {
     }),
 };
 
-const Contact = () => {
-    const links = [
-        {
-            title: "GitHub",
-            icon: <FaGithub />,
-            href: "https://github.com/istiak19",
-        },
-        {
-            title: "LinkedIn",
-            icon: <FaLinkedin />,
-            href: "https://www.linkedin.com/in/istiak-ahamed-0619at/",
-        },
-        {
-            title: "Email",
-            icon: <MdMail />,
-            href: "mailto:istiakanik79@gmail.com",
-        },
-        {
-            title: "Twitter",
-            icon: <FaTwitter />,
-            href: "https://x.com/ISTIAKA13842838",
-        },
-        {
-            title: "Facebook",
-            icon: <FaFacebook />,
-            href: "https://www.facebook.com/istiak.ahamed.19/",
-        },
-        {
-            title: "WhatsApp",
-            icon: <FaWhatsapp />,
-            href: "https://wa.me/8801794270067",
-        },
-        {
-            title: "Telegram",
-            icon: <FaTelegramPlane />,
-            href: "https://t.me/+8801794270067",
-        }
-    ];
+const ContactSection = () => {
 
     return (
         <div className="bg-black text-white py-14 px-4 min-h-screen relative">
@@ -70,14 +28,10 @@ const Contact = () => {
                         <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
                             Let’s Connect
                         </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-lg mt-3">
-                            Whether it’s a collaboration, freelance project, or just a hello —
-                            I’m only a message away!
-                        </p>
                     </div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
                     {/* Contact Info */}
                     <motion.div
                         variants={fadeUp}
@@ -85,9 +39,9 @@ const Contact = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         custom={1}
-                        className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
+                        className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 h-full"
                     >
-                        <div className="bg-gray-900 p-6 md:p-8 rounded-[14px] shadow-xl transition-all duration-300">
+                        <div className="bg-gray-900 p-6 md:p-8 rounded-[14px] shadow-xl transition-all duration-300 h-full flex flex-col">
                             <h3 className="text-2xl font-semibold mb-5 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                 Contact Information
                             </h3>
@@ -98,11 +52,17 @@ const Contact = () => {
                                 </p>
 
                                 <p>
+                                    I make it a priority to respond within 24 hours and welcome discussions around new ideas,
+                                    long-term partnerships, or specialized projects. Whether you need technical expertise,
+                                    creative input, or reliable support to bring your vision to life, I’d be glad to help.
+                                </p>
+
+                                <p>
                                     Let’s connect and explore how we can work together to achieve your goals.
                                 </p>
                             </div>
 
-                            <div className="space-y-3 text-base">
+                            <div className="space-y-4 text-base">
                                 <div className="flex items-center gap-4">
                                     <Mail className="text-cyan-400" />
                                     <span>istiakanik79@gmail.com</span>
@@ -122,38 +82,6 @@ const Contact = () => {
                                     <span>Dhaka, Bangladesh</span>
                                 </div>
                             </div>
-
-                            <div className="mt-4">
-                                <h4 className="text-lg uppercase mb-2 font-medium bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent">
-                                    Social Profiles
-                                </h4>
-                                <FloatingDock
-                                    mobileClassName="translate-y-34"
-                                    items={links.map(link => ({
-                                        ...link,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                    }))}
-                                />
-                                <div className="md:hidden mt-4 flex gap-2 flex-wrap">
-                                    {
-                                        links.map((link, i) => (
-                                            <motion.a
-                                                key={link.title}
-                                                href={link.href}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label={link.title}
-                                                variants={fadeUp}
-                                                custom={i + 2}
-                                                className="border-2 border-fuchsia-500 p-2 rounded-full text-xl hover:text-indigo-400 transition-colors"
-                                            >
-                                                {link.icon}
-                                            </motion.a>
-                                        ))
-                                    }
-                                </div>
-                            </div>
                         </div>
                     </motion.div>
 
@@ -164,9 +92,9 @@ const Contact = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         custom={2}
-                        className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
+                        className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 h-full"
                     >
-                        <form className="bg-gray-900 p-6 md:p-12 rounded-[14px] shadow-xl space-y-5">
+                        <form className="bg-gray-900 p-6 md:p-11 rounded-[14px] shadow-xl space-y-5 h-full flex flex-col">
                             <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                 Send a Message
                             </h3>
@@ -183,21 +111,21 @@ const Contact = () => {
                             <textarea
                                 rows={4}
                                 placeholder="Your Message"
-                                className="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 text-white"
+                                className="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 text-white flex-grow"
                             />
                             <button
                                 type="submit"
-                                className="w-full py-3 cursor-pointer bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-white rounded-lg font-medium hover:opacity-90 transition-all"
+                                className="mt-auto w-full py-3 cursor-pointer bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-white rounded-lg font-medium hover:opacity-90 transition-all"
                             >
                                 Send Message
                             </button>
                         </form>
                     </motion.div>
                 </div>
+
             </div>
-            <BackgroundBeams />
         </div>
     );
 };
 
-export default Contact;
+export default ContactSection;

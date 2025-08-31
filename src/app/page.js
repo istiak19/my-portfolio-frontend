@@ -2,6 +2,7 @@
 
 import AboutSection from "@/Components/AboutSection/AboutSection";
 import Banner from "@/Components/Banner/Banner";
+import ContactSection from "@/Components/ContactSection/ContactSection";
 import EducationJourney from "@/Components/EducationJourney/EducationJourney";
 import ProjectSection from "@/Components/ProjectSection/ProjectSection";
 import SkillSection from "@/Components/SkillSection/SkillSection";
@@ -14,6 +15,7 @@ export default function AnimatedBox() {
       <SkillSection />
       <EducationJourney />
       <ProjectSection />
+      <ContactSection />
     </div>
   );
 }
