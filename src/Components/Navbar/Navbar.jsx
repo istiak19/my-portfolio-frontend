@@ -57,7 +57,7 @@ const Navbar = () => {
                                     href={link.path}
                                     className={`transition-colors duration-200 ${isActive(link.path)
                                         ? "bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-semibold"
-                                        : "text-gray-700 hover:text-fuchsia-500 dark:text-gray-300"
+                                        : "text-gray-700 hover:text-fuchsia-500 dark:text-white"
                                         }`}
                                 >
                                     {link.name}
@@ -72,12 +72,19 @@ const Navbar = () => {
                     {/* Resume Button (Desktop only) */}
                     <button
                         onClick={handleResumeDownload}
-                        className="group relative md:inline-flex hidden items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md bg-transparent shadow-md hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer"
+                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md 
+             bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10 
+             text-gray-800 dark:text-white transition-all duration-300 ease-in-out 
+             shadow-md hover:shadow-lg cursor-pointer"
                     >
-                        <IoCloudDownloadOutline className="text-xl text-gradient transition-transform duration-300 group-hover:rotate-[-15deg]" />
-                        <span className="font-medium bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent hover:text-indigo-500">
+                        <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+
+                        <span className="font-medium text-gray-800 dark:text-white 
+                   group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-indigo-500 group-hover:to-fuchsia-500 
+                   group-hover:bg-clip-text group-hover:text-transparent">
                             Download Resume
                         </span>
+
                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                     </button>
 

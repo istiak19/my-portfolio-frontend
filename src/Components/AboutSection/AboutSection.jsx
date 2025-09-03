@@ -20,8 +20,9 @@ const textVariant = {
 
 const AboutSection = () => {
     return (
-        <section className="bg-black">
-            <section className="container mx-auto text-gray-300 py-10 px-6 md:px-4 flex flex-col lg:flex-row items-center justify-center gap-10">
+        <section className="bg-white dark:bg-black transition-colors duration-500">
+            <div className="container mx-auto text-gray-800 dark:text-gray-300 py-2 px-6 md:px-4 flex flex-col lg:flex-row items-center justify-center gap-10">
+
                 {/* Profile Image */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -93,14 +94,21 @@ const AboutSection = () => {
                         className="mt-6 flex justify-center lg:justify-start"
                     >
                         <Link href='/about'>
-                            <button className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient border border-emerald-500/30 bg-transparent backdrop-blur-md hover:text-indigo-500 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer">
-                                <span>See More →</span>
+                            <button className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md 
+                                               bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10 
+                                               text-gray-800 dark:text-white transition-all duration-300 ease-in-out 
+                                               shadow-md hover:shadow-lg cursor-pointer">
+                                <span className="font-medium text-gray-800 dark:text-white 
+                                                 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-indigo-500 group-hover:to-fuchsia-500 
+                                                 group-hover:bg-clip-text group-hover:text-transparent">
+                                    See More →
+                                </span>
                                 <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
                             </button>
                         </Link>
                     </motion.div>
                 </motion.div>
-            </section>
+            </div>
         </section>
     );
 };
