@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BiLogoFirebase } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux, SiAxios, SiReactquery } from "react-icons/si";
+import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux, SiAxios, SiReactquery, SiPrisma } from "react-icons/si";
 import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
 
 const Skills = () => {
@@ -24,11 +24,12 @@ const Skills = () => {
     ];
 
     const backendSkills = [
-        { icon: <BiLogoFirebase className="w-full h-full p-5 text-[#FFA000]" />, label: "Firebase", color: "#FFA000" },
-        { icon: <FaNode className="w-full h-full p-5 text-[#339933]" />, label: "Node.js", color: "#339933" },
-        { icon: <SiMongodb className="w-full h-full p-5 text-[#47A248]" />, label: "MongoDB", color: "#47A248" },
-        { icon: <SiMongoose className="w-full h-full p-5 text-[#800000]" />, label: "Mongoose", color: "#800000" },
-        { icon: <SiPostgresql className="w-full h-full p-5 text-[#336791]" />, label: "PostgreSQL", color: "#336791" },
+        { icon: <BiLogoFirebase className="w-full h-full p-5 text-[#FFCA28] dark:text-[#FFA000]" />, label: "Firebase", color: "#FFCA28" },
+        { icon: <FaNode className="w-full h-full p-5 text-[#339933] dark:text-[#66BB6A]" />, label: "Node.js", color: "#339933" },
+        { icon: <SiMongodb className="w-full h-full p-5 text-[#4DB33D] dark:text-[#81C784]" />, label: "MongoDB", color: "#4DB33D" },
+        { icon: <SiMongoose className="w-full h-full p-5 text-[#800000] dark:text-[#E57373]" />, label: "Mongoose", color: "#339933" },
+        { icon: <SiPostgresql className="w-full h-full p-5 text-[#336791] dark:text-[#5C9AC7]" />, label: "PostgreSQL", color: "#336791" },
+        { icon: <SiPrisma className="w-full h-full p-5 text-black dark:text-white" />, label: "Prisma ORM", color: "" },
     ];
 
     const container = {
@@ -101,7 +102,7 @@ const Skills = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4 justify-items-center"
+                    className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 justify-items-center"
                 >
                     {renderSkills(backendSkills)}
                 </motion.div>
