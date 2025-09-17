@@ -20,9 +20,10 @@ const Navbar = () => {
         { name: "Contact", path: "/contact" },
     ];
 
-    const resumeViewLink = "https://drive.google.com/file/d/1h_fHft7_KocwHnZc_oThNB9UmnDQ6a_c/view?usp=sharing";
-
-    const resumeDownloadLink = "https://drive.google.com/uc?export=download&id=1h_fHft7_KocwHnZc_oThNB9UmnDQ6a_c";
+    const resumeViewLink =
+        "https://drive.google.com/file/d/1NylUXKExZJz_kw984n_ZcdY30DyJwnYb/view?usp=sharing";
+    const resumeDownloadLink =
+        "https://drive.google.com/uc?export=download&id=1NylUXKExZJz_kw984n_ZcdY30DyJwnYb";
 
     const handleResumeDownload = () => {
         window.open(resumeViewLink, "_blank");

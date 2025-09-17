@@ -26,11 +26,12 @@ const ProjectDetails = ({ id }) => {
             serverLink: "https://github.com/istiak19/Nirapod-Parcel-Backend",
             liveLink: "https://nirapod-parcel.netlify.app/",
             features: [
-                "Role-based dashboards (Sender, Receiver, Admin).",
-                "Real-time parcel tracking.",
-                "Delivery status updates & logs.",
-                "Secure authentication & role switching.",
-                "Analytics & reporting with charts."
+                "Role-based dashboards delivering tailored experiences for Senders, Receivers, and Admins.",
+                "Real-time parcel tracking with detailed status logs and delivery updates.",
+                "Dynamic analytics & reporting through interactive dashboards for smarter decision-making.",
+                "Sender: Can create parcels, cancel requests if not dispatched, and view all parcel histories.",
+                "Receiver: Can view incoming parcels and confirm deliveries when parcels are in transit.",
+                "Admin: Can manage users, update parcel statuses, and oversee the entire delivery workflow."
             ]
         },
         {

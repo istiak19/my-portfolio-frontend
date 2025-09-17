@@ -19,9 +19,9 @@ import {
 
 const Banner = () => {
     const resumeViewLink =
-        "https://drive.google.com/file/d/1PAIOyIogLErxCFr4KkdZWZBoczIFT5uH/view?usp=sharing";
+        "https://drive.google.com/file/d/1NylUXKExZJz_kw984n_ZcdY30DyJwnYb/view?usp=sharing";
     const resumeDownloadLink =
-        "https://drive.google.com/uc?export=download&id=1PAIOyIogLErxCFr4KkdZWZBoczIFT5uH";
+        "https://drive.google.com/uc?export=download&id=1NylUXKExZJz_kw984n_ZcdY30DyJwnYb";
 
     const handleResumeDownload = () => {
         window.open(resumeViewLink, "_blank");
