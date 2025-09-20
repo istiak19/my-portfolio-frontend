@@ -3,19 +3,11 @@
 import Image from "next/image";
 import { MdMail } from "react-icons/md";
 import { Cover } from "../ui/Cover/cover";
-import anikPic from "../../../public/Anik.jpg";
 import { Meteors } from "../ui/Meteors/meteors";
 import { Typewriter } from "react-simple-typewriter";
-import { IoCloudDownloadOutline, IoEyeOutline } from "react-icons/io5";
 import { FloatingDock } from "../ui/FloatingDock/floating-dock";
-import {
-    FaFacebook,
-    FaGithub,
-    FaLinkedin,
-    FaTelegramPlane,
-    FaTwitter,
-    FaWhatsapp,
-} from "react-icons/fa";
+import { IoCloudDownloadOutline, IoEyeOutline } from "react-icons/io5";
+import { FaFacebook, FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Banner = () => {
     const resumeViewLink =
@@ -143,7 +135,7 @@ const Banner = () => {
 
                     <figure className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-[2px] border-fuchsia-600/50 shadow-3xl backdrop-blur-md bg-fuchsia-500 overflow-hidden ring-1 ring-fuchsia-500/10 hover:scale-105 transition-transform duration-500 ease-in-out animate-float-slow">
                         <Image
-                            src={anikPic}
+                            src="/Anik.jpg"
                             alt="Istiak Ahamed's profile"
                             fill
                             className="grayscale-0 hover:grayscale transition-all duration-500 ease-in-out"

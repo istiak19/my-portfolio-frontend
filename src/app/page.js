@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import AboutSection from "@/Components/AboutSection/AboutSection";
 import Banner from "@/Components/Banner/Banner";
-import ContactSection from "@/Components/ContactSection/ContactSection";
-import EducationJourney from "@/Components/EducationJourney/EducationJourney";
-import ProjectSection from "@/Components/ProjectSection/ProjectSection";
+import AboutSection from "@/Components/AboutSection/AboutSection";
 import SkillSection from "@/Components/SkillSection/SkillSection";
+import ContactSection from "@/Components/ContactSection/ContactSection";
+import ProjectSection from "@/Components/ProjectSection/ProjectSection";
+import EducationJourney from "@/Components/EducationJourney/EducationJourney";
 
 export default function AnimatedBox() {
   return (

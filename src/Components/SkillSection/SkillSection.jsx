@@ -82,7 +82,7 @@ const SkillSection = () => {
                 </motion.div>
 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-6 text-center">
-                    Frontend Development Skills
+                    Front-End Development Skills
                 </h3>
                 <motion.div
                     variants={container}
@@ -95,7 +95,7 @@ const SkillSection = () => {
                 </motion.div>
 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-10 mb-6 text-center">
-                    Backend Development Skills
+                    Back-End Development Skills
                 </h3>
                 <motion.div
                     variants={container}

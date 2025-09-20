@@ -24,7 +24,11 @@ const AboutPage = () => {
                             className="relative w-[250px] flex-1 h-[340px] md:w-[350px] md:h-[350px] bg-gradient-to-tr from-pink-500 to-purple-500 p-1 rounded-[30%]"
                         >
                             <div className="w-full h-full rounded-[30%] overflow-hidden bg-white dark:bg-gray-800">
-                                <Image src={profileImg} alt="Istiak" className="w-full h-full" />
+                                <Image
+                                    src={profileImg}
+                                    alt="Istiak"
+                                    className="w-full h-full"
+                                />
                             </div>
                             <h1 className="absolute origin-right mt-5 text-xs md:text-sm font-semibold flex items-center gap-2">
                                 <span className="w-18 h-[1px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></span>

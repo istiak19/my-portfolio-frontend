@@ -42,7 +42,7 @@ const projects = [
         title: "EduGenie",
         image: eduGenie,
         viewLink: "https://genies-two.vercel.app/",
-        githubLink: "https://github.com/imtiaz-zihad/Edugenie/tree/development",
+        githubLink: "https://github.com/istiak19/EduGenie",
     },
 ];
 

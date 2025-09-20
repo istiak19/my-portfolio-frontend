@@ -21,7 +21,7 @@ const ProjectDetails = ({ id }) => {
             technologies: "React.js, Redux, TypeScript, Redis, Passport.js, Node.js, Express.js, Mongoose, MongoDB",
             description: "Nirapod Parcel is a robust, role-based React application built with TypeScript, Redux Toolkit, and RTK Query, designed to provide a seamless and secure parcel management experience. It features dynamic dashboards, visual analytics, and responsive UI tailored for Senders, Receivers, and Admins. Users can track parcels, manage deliveries, update statuses, and view detailed logs in real time. With role-specific navigation, API integration, and accessibility-focused design, Nirapod delivers a professional, user-friendly, and performant solution for modern parcel delivery operations.",
             // challenges: "Seamlessly connecting the platform with local blood banks for real-time updates.",
-            improvements: "Rider assignment using smart allocation for faster, more efficient deliveries. Integrated payment tracking ensures timely, transparent payouts to delivery partners with minimal errors",
+            improvements: "Integrated payment tracking ensures timely, transparent payouts to delivery partners with minimal errors",
             clientLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
             serverLink: "https://github.com/istiak19/Nirapod-Parcel-Backend",
             liveLink: "https://nirapod-parcel.netlify.app/",
@@ -66,7 +66,7 @@ const ProjectDetails = ({ id }) => {
             description: "EduGenie is a cutting-edge AI-powered educational platform designed to revolutionize modern learning experiences for both students and educators. Through a dynamic role-based dashboard, students can generate custom course content based on their chosen topic, difficulty level, and duration—empowering them to learn at their own pace with AI-generated chapters, videos, and code examples. Educators, on the other hand, are provided with tools to publish and approve educational blogs, create quizzes, and manage their profiles seamlessly. The platform focuses on interactivity and accessibility with a clean, responsive UI, built using Next.js, Tailwind CSS, and integrated with MongoDB for persistent data storage. Authenticated via NextAuth.js, EduGenie ensures secure access and smooth transitions across devices. Whether you're a curious student or a passionate teacher, EduGenie makes learning more personalized, efficient, and enjoyable by merging the power of artificial intelligence with modern education.",
             challenges: "Seamlessly connecting the platform with local blood banks for real-time updates.",
             improvements: "Ensuring secure data storage and seamless integration with blood banks and donation campaigns.",
-            clientLink: "https://github.com/imtiaz-zihad/Edugenie/tree/development",
+            clientLink: "https://github.com/istiak19/EduGenie",
             liveLink: "https://genies-two.vercel.app/",
             features: [
                 "AI-Powered Course Generation – Uses Gemini API to generate personalized educational content.",

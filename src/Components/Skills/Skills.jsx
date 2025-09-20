@@ -85,7 +85,7 @@ const Skills = () => {
                     Each section represents a milestone in my continuous learning path.
                 </motion.p>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-6 text-center">Frontend Development Skills</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-6 text-center">Front-End Development Skills</h3>
                 <motion.div
                     variants={container}
                     initial="hidden"
@@ -96,7 +96,7 @@ const Skills = () => {
                     {renderSkills(frontendSkills)}
                 </motion.div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-12 mb-6 text-center">Backend Development Skills</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-12 mb-6 text-center">Back-End Development Skills</h3>
                 <motion.div
                     variants={container}
                     initial="hidden"

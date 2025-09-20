@@ -19,14 +19,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} font-sans antialiased`}>
+      <body className={roboto.className}>
         <ThemeProvider ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
           <Navbar />
-          {children}
+          <main>
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
