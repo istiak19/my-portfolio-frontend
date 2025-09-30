@@ -1,13 +1,17 @@
 "use client";
-import { cn } from "@/lib/utils";
+
+import { cn } from "@/src/lib/utils";
 import { motion } from "motion/react";
 import React from "react";
 
-export const Meteors = ({
-    number,
-    className
-}) => {
-    const meteors = new Array(number || 20).fill(true);
+interface MeteorsProps {
+    number?: number;
+    className?: string;
+}
+
+export const Meteors: React.FC<MeteorsProps> = ({ number = 20, className }) => {
+    const meteors = new Array(number).fill(true);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}

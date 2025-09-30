@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,11 +8,18 @@ import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
 
-const Navbar = () => {
+interface NavLink {
+    name: string;
+    path: string;
+}
+
+const Navbar: React.FC = () => {
     const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
-    const isActive = (path) => pathname === path;
-    const navLinks = [
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const isActive = (path: string) => pathname === path;
+
+    const navLinks: NavLink[] = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Skills", path: "/skills" },
@@ -20,12 +27,12 @@ const Navbar = () => {
         { name: "Contact", path: "/contact" },
     ];
 
-    const resumeViewLink =
+    const resumeViewLink: string =
         "https://drive.google.com/file/d/1NylUXKExZJz_kw984n_ZcdY30DyJwnYb/view?usp=sharing";
-    const resumeDownloadLink =
+    const resumeDownloadLink: string =
         "https://drive.google.com/uc?export=download&id=1NylUXKExZJz_kw984n_ZcdY30DyJwnYb";
 
-    const handleResumeDownload = () => {
+    const handleResumeDownload = (): void => {
         window.open(resumeViewLink, "_blank");
         const link = document.createElement("a");
         link.href = resumeDownloadLink;
@@ -68,7 +75,7 @@ const Navbar = () => {
                     </ul>
 
                     {/* Theme Change Button */}
-                    <ModeToggle className="cursor-pointer" />
+                    <ModeToggle />
 
                     {/* Resume Button (Desktop only) */}
                     <button
@@ -79,13 +86,11 @@ const Navbar = () => {
              shadow-md hover:shadow-lg cursor-pointer"
                     >
                         <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
-
                         <span className="font-medium text-gray-800 dark:text-white 
                    group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-indigo-500 group-hover:to-fuchsia-500 
                    group-hover:bg-clip-text group-hover:text-transparent">
                             Download Resume
                         </span>
-
                         <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                     </button>
 
@@ -113,39 +118,35 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Dropdown Menu */}
-            {
-                isOpen && (
-                    <ul className="md:hidden flex flex-col items-start gap-3 px-6 py-4 bg-[#292637] text-white shadow-lg">
-                        {navLinks.map((link) => (
-                            <li key={link.path} className="w-full">
-                                <Link
-                                    href={link.path}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`block w-full py-1 ${isActive(link.path)
-                                        ? "text-blue-500 font-semibold"
-                                        : "hover:text-blue-400"
-                                        }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            </li>
-                        ))}
-                        <li className="w-full pt-2">
-                            <button
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    handleResumeDownload();
-                                }}
-                                className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+            {isOpen && (
+                <ul className="md:hidden flex flex-col items-start gap-3 px-6 py-4 bg-[#292637] text-white shadow-lg">
+                    {navLinks.map((link) => (
+                        <li key={link.path} className="w-full">
+                            <Link
+                                href={link.path}
+                                onClick={() => setIsOpen(false)}
+                                className={`block w-full py-1 ${isActive(link.path) ? "text-blue-500 font-semibold" : "hover:text-blue-400"
+                                    }`}
                             >
-                                <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
-                                <span className="font-medium">Download Resume</span>
-                                <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
-                            </button>
+                                {link.name}
+                            </Link>
                         </li>
-                    </ul>
-                )
-            }
+                    ))}
+                    <li className="w-full pt-2">
+                        <button
+                            onClick={() => {
+                                setIsOpen(false);
+                                handleResumeDownload();
+                            }}
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                        >
+                            <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
+                            <span className="font-medium">Download Resume</span>
+                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                        </button>
+                    </li>
+                </ul>
+            )}
         </header>
     );
 };

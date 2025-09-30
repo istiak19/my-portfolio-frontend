@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
-import Footer from "@/Components/Footer/Footer";
-import Navbar from "@/Components/Navbar/Navbar";
-import { ThemeProvider } from "@/Provider/Theme-provider";
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
+import { ThemeProvider } from "../Provider/Theme-provider";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -16,7 +17,11 @@ export const metadata = {
     "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React.js, and MongoDB.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={roboto.className}>

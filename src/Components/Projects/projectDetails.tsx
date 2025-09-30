@@ -12,7 +12,7 @@ import bloodProject from '../../../public/project/BloodProject.png';
 import nirapodParcel from '../../../public/project/nirapod.png';
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
-const ProjectDetails = ({ id }) => {
+const ProjectDetails = ({ id }: any) => {
     const projects = [
         {
             id: 1,

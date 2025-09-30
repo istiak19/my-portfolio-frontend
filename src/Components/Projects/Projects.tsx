@@ -1,52 +1,47 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
-import { SparklesCore } from '../ui/Sparkles/sparkles';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import eduGenie from '../../../public/project/eduGenie.png';
-import eduProject from '../../../public/project/eduProject.png';
-import fundProject from '../../../public/project/fundProject.png';
-import bloodProject from '../../../public/project/BloodProject.png';
-import nirapodParcel from '../../../public/project/nirapod.png';
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { SparklesCore } from "../ui/Sparkles/sparkles"; // Ensure this file exists
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const projects = [
     {
         id: 1,
-        title: 'Nirapod Parcel',
-        image: nirapodParcel,
-        viewLink: 'https://nirapod-parcel.netlify.app/',
-        githubLink: 'https://github.com/istiak19/Nirapod-Parcel-Frontend',
+        title: "Nirapod Parcel",
+        image: "/project/nirapod.png",
+        viewLink: "https://nirapod-parcel.netlify.app/",
+        githubLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
     },
     {
         id: 2,
-        title: 'BloodBanker',
-        image: bloodProject,
-        viewLink: 'https://bloodbanker-567f0.web.app/',
-        githubLink: 'https://github.com/istiak19/BloodBanker-client',
+        title: "BloodBanker",
+        image: "/project/BloodProject.png",
+        viewLink: "https://bloodbanker-567f0.web.app/",
+        githubLink: "https://github.com/istiak19/BloodBanker-client",
     },
     {
         id: 3,
-        title: 'EduGenie',
-        image: eduGenie,
-        viewLink: 'https://genies-two.vercel.app/',
-        githubLink: 'https://github.com/istiak19/EduGenie',
+        title: "EduGenie",
+        image: "/project/eduGenie.png",
+        viewLink: "https://genies-two.vercel.app/",
+        githubLink: "https://github.com/istiak19/EduGenie",
     },
     {
         id: 4,
-        title: 'EduCircle',
-        image: eduProject,
-        viewLink: 'https://educircle-839d0.web.app/',
-        githubLink: 'https://github.com/istiak19/EduCircle-client',
+        title: "EduCircle",
+        image: "/project/eduProject.png",
+        viewLink: "https://educircle-839d0.web.app/",
+        githubLink: "https://github.com/istiak19/EduCircle-client",
     },
     {
         id: 5,
-        title: 'Fundsphere',
-        image: fundProject,
-        viewLink: 'https://fundsphere-website.web.app/',
-        githubLink: 'https://github.com/istiak19/assignment-10-client',
+        title: "Fundsphere",
+        image: "/project/fundProject.png",
+        viewLink: "https://fundsphere-website.web.app/",
+        githubLink: "https://github.com/istiak19/assignment-10-client",
     },
 ];
 
@@ -81,7 +76,7 @@ const Projects = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {projects.map((project, index) => (
                         <motion.div
-                            key={index}
+                            key={project.id}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -111,8 +106,7 @@ const Projects = () => {
                                     rel="noopener noreferrer"
                                     className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                 >
-                                    Live Demo
-                                    <ArrowUpRight className="text-indigo-500" />
+                                    Live Demo <ArrowUpRight className="text-indigo-500" />
                                 </a>
 
                                 <Link
@@ -130,8 +124,7 @@ const Projects = () => {
                                     rel="noopener noreferrer"
                                     className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                 >
-                                    GitHub Code
-                                    <FaGithub className="text-lg text-indigo-500" />
+                                    GitHub Code <FaGithub className="text-lg text-indigo-500" />
                                 </a>
                             </div>
                         </motion.div>

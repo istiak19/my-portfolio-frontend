@@ -1,14 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { BiLogoFirebase } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux, SiAxios, SiReactquery, SiPrisma } from "react-icons/si";
 import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
+import React from "react";
 
-const Skills = () => {
-    const frontendSkills = [
+interface Skill {
+    icon: React.ReactElement;
+    label: string;
+    color: string;
+}
+
+const Skills: React.FC = () => {
+    const frontendSkills: Skill[] = [
         { icon: <FaHtml5 className="w-full h-full p-5 text-[#E34F26]" />, label: "HTML5", color: "#E34F26" },
         { icon: <FaCss3 className="w-full h-full p-5 text-[#1572B6]" />, label: "CSS3", color: "#1572B6" },
         { icon: <RiTailwindCssFill className="w-full h-full p-5 text-[#38BDF8]" />, label: "TailwindCSS", color: "#38BDF8" },
@@ -23,7 +30,7 @@ const Skills = () => {
         { icon: <SiReactquery className="w-full h-full p-5 text-[#FF4154]" />, label: "TanStack Query", color: "#FF4154" },
     ];
 
-    const backendSkills = [
+    const backendSkills: Skill[] = [
         { icon: <BiLogoFirebase className="w-full h-full p-5 text-[#FFCA28] dark:text-[#FFA000]" />, label: "Firebase", color: "#FFCA28" },
         { icon: <FaNode className="w-full h-full p-5 text-[#339933] dark:text-[#66BB6A]" />, label: "Node.js", color: "#339933" },
         { icon: <SiMongodb className="w-full h-full p-5 text-[#4DB33D] dark:text-[#81C784]" />, label: "MongoDB", color: "#4DB33D" },
@@ -32,19 +39,17 @@ const Skills = () => {
         { icon: <SiPrisma className="w-full h-full p-5 text-black dark:text-white" />, label: "Prisma ORM", color: "" },
     ];
 
-    const container = {
+    const container: Variants = {
         hidden: {},
-        show: {
-            transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-        },
+        show: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
     };
 
-    const item = {
+    const item: Variants = {
         hidden: { opacity: 0, scale: 0.8, y: 30 },
         show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
     };
 
-    const renderSkills = (skills) =>
+    const renderSkills = (skills: Skill[]) =>
         skills.map((skill, idx) => (
             <motion.div key={idx} variants={item} className="flex flex-col items-center cursor-pointer">
                 <div

@@ -1,7 +1,9 @@
-import Projects from "@/Components/Projects/Projects";
+// import AboutPage from "@/Components/AboutPage/AboutPage";
+
+import AboutPage from "@/src/Components/AboutPage/AboutPage";
 
 export const metadata = {
-    title: "Istiak Ahamed – Project",
+    title: "Istiak Ahamed – About",
     description:
         "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React, and MongoDB.",
 };
@@ -9,7 +11,7 @@ export const metadata = {
 const page = () => {
     return (
         <div>
-            <Projects />
+            <AboutPage />
         </div>
     );
 };

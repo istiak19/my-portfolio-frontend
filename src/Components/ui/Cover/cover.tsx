@@ -1,15 +1,20 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { AnimatePresence, motion, SVGMotionProps } from "framer-motion";
+import { cn } from "@/src/lib/utils";
 import { SparklesCore } from "../Sparkles/sparkles";
 
-export const Cover = ({ children, className }) => {
+interface CoverProps {
+    children: React.ReactNode;
+    className?: string;
+}
+
+export const Cover: React.FC<CoverProps> = ({ children, className }) => {
     const [hovered, setHovered] = useState(false);
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement>(null);
     const [containerWidth, setContainerWidth] = useState(0);
-    const [beamPositions, setBeamPositions] = useState([]);
+    const [beamPositions, setBeamPositions] = useState<number[]>([]);
 
     useEffect(() => {
         if (ref.current) {
@@ -29,7 +34,10 @@ export const Cover = ({ children, className }) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             ref={ref}
-            className="relative group/cover inline-block black:bg-neutral-900 light:bg-neutral-100 px-2 py-2 transition duration-200 rounded-sm w-full h-24"
+            className={cn(
+                "relative group/cover inline-block black:bg-neutral-900 light:bg-neutral-100 px-2 py-2 transition duration-200 rounded-sm w-full h-24",
+                className
+            )}
         >
             <AnimatePresence>
                 {hovered && (
@@ -43,11 +51,7 @@ export const Cover = ({ children, className }) => {
                         <motion.div
                             animate={{ translateX: ["-50%", "0%"] }}
                             transition={{
-                                translateX: {
-                                    duration: 10,
-                                    ease: "linear",
-                                    repeat: Infinity,
-                                },
+                                translateX: { duration: 10, ease: "linear", repeat: Infinity },
                             }}
                             className="flex h-full w-[200%]"
                         >
@@ -90,26 +94,12 @@ export const Cover = ({ children, className }) => {
                     x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
                     y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
                 }}
-                exit={{
-                    scale: 1,
-                    x: 0,
-                    y: 0,
-                }}
+                exit={{ scale: 1, x: 0, y: 0 }}
                 transition={{
                     duration: 0.2,
-                    x: {
-                        duration: 0.2,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                    },
-                    y: {
-                        duration: 0.2,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                    },
-                    scale: {
-                        duration: 0.2,
-                    },
+                    x: { duration: 0.2, repeat: Infinity, repeatType: "loop" },
+                    y: { duration: 0.2, repeat: Infinity, repeatType: "loop" },
+                    scale: { duration: 0.2 },
                 }}
                 className={cn(
                     "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
@@ -128,18 +118,27 @@ export const Cover = ({ children, className }) => {
     );
 };
 
-export const Beam = ({ className, delay, duration, hovered, width = 600, ...svgProps }) => {
+// ---------- Beam Component ----------
+interface BeamProps extends React.SVGProps<SVGSVGElement> {
+    className?: string;
+    delay?: number;
+    duration?: number;
+    hovered?: boolean;
+    width?: number;
+}
+
+export const Beam: React.FC<BeamProps> = ({ className, delay, duration, hovered, width = 600, ...svgProps }) => {
     const id = useId();
 
     return (
         <motion.svg
             width={width}
-            height="1"
+            height={1}
             viewBox={`0 0 ${width} 1`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={cn("absolute inset-x-0 w-full", className)}
-            {...svgProps}
+            {...(svgProps as SVGMotionProps<SVGSVGElement>)}
         >
             <motion.path d={`M0 0.5H${width}`} stroke={`url(#svgGradient-${id})`} />
             <defs>
@@ -166,7 +165,12 @@ export const Beam = ({ className, delay, duration, hovered, width = 600, ...svgP
     );
 };
 
-export const CircleIcon = ({ className }) => {
+// ---------- Circle Icon ----------
+interface CircleIconProps {
+    className?: string;
+}
+
+export const CircleIcon: React.FC<CircleIconProps> = ({ className }) => {
     return (
         <div
             className={cn(
