@@ -18,7 +18,7 @@ const Login = () => {
 
                 <div className="absolute bottom-40 left-10 text-white max-w-lg space-y-4">
                     <h2 className="text-4xl font-extrabold drop-shadow-md">
-                        Welcome Back 👋
+                        Welcome Back
                     </h2>
                     <p className="text-lg leading-relaxed opacity-90">
                         Sign in to access the private section of my portfolio,
@@ -28,9 +28,9 @@ const Login = () => {
             </div>
 
             {/* Right side login form */}
-            <div className="flex flex-col justify-center px-6 py-10 sm:px-10 md:px-16 bg-background">
+            <div className="flex flex-col justify-center px-6 py-5 sm:px-10 md:px-16 bg-background">
                 {/* Logo / Home link */}
-                <div className="mb-10 flex justify-center md:justify-start">
+                <div className="mb-5 flex justify-center md:justify-start">
                     <Link
                         href="/"
                         className="flex items-center gap-2 text-lg font-semibold hover:opacity-80 transition-opacity"

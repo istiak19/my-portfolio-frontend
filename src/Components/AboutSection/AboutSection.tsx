@@ -1,9 +1,11 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profilePic from "../../../public/Anik.jpg";
+import { AboutResponse, getAboutData } from "@/src/services/aboutServices";
+import { useEffect, useState } from "react";
 
 // Animation variants
 const textVariant = {
@@ -19,6 +21,14 @@ const textVariant = {
 };
 
 const AboutSection = () => {
+    const [about, setAbout] = useState<AboutResponse | null>(null);
+
+    useEffect(() => {
+        getAboutData().then((data) => setAbout(data));
+    }, []);
+
+    if (!about) return null;
+
     return (
         <section className="bg-white dark:bg-black transition-colors duration-500">
             <div className="container mx-auto text-gray-800 dark:text-gray-300 py-2 px-6 md:px-4 flex flex-col lg:flex-row items-center justify-center gap-10">
@@ -60,8 +70,7 @@ const AboutSection = () => {
                         custom={1}
                         className="text-lg mb-4 text-center lg:text-left"
                     >
-                        Full-Stack Web Developer passionate about building scalable, user-friendly applications.
-                        Skilled in modern frontend & backend technologies, with a focus on clean and impactful solutions.
+                        {about.data.introduction}
                     </motion.p>
 
                     <motion.ul
@@ -69,15 +78,20 @@ const AboutSection = () => {
                         custom={2}
                         className="list-disc pl-5 space-y-1"
                     >
-                        <li>
-                            <strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS, ShadCN, Material UI, Bootstrap, Axios, TanStack Query
-                        </li>
-                        <li>
-                            <strong>Backend:</strong> Node.js, Express.js, Mongoose, RESTful APIs, JWT, NextAuth.js, Firebase
-                        </li>
-                        <li>
-                            <strong>Database:</strong> MongoDB
-                        </li>
+                        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                            {about.data?.skills &&
+                                Object.entries(about?.data?.skills).map(([category, items]) => (
+                                    <li key={category}>
+                                        <strong className="capitalize">
+                                            {category
+                                                .replace(/([A-Z])/g, " $1")
+                                                .replace(/^./, (s) => s.toUpperCase())}
+                                            :
+                                        </strong>{" "}
+                                        {items?.length ? items.join(", ") : "N/A"}
+                                    </li>
+                                ))}
+                        </ul>
                     </motion.ul>
 
                     <motion.p
