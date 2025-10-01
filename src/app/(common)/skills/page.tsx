@@ -1,5 +1,3 @@
-// import Skills from "@/Components/Skills/Skills";
-
 import Skills from "@/src/components/Skills/Skills";
 
 export const metadata = {
