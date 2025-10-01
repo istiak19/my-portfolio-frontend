@@ -2,6 +2,7 @@ import LoginForm from "@/src/components/LoginForm/LoginForm";
 import Image from "next/image";
 import image from "../../../public/diu.jpg";
 import Link from "next/link";
+import logo from "../../../public/logo.png";
 
 const Login = () => {
     return (
@@ -31,15 +32,14 @@ const Login = () => {
             <div className="flex flex-col justify-center px-6 py-5 sm:px-10 md:px-16 bg-background">
                 {/* Logo / Home link */}
                 <div className="mb-5 flex justify-center md:justify-start">
-                    <Link
-                        href="/"
-                        className="flex items-center gap-2 text-lg font-semibold hover:opacity-80 transition-opacity"
-                        aria-label="Go to homepage"
-                    >
+                    <Link href="/" className="flex items-center group">
+                        <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform duration-200">
+                            <Image src={logo} alt="Logo" fill className="object-cover" />
+                        </div>
                         <span className="sr-only">Go to homepage</span>
-                        <p className="text-2xl font-extrabold text-sky-500 tracking-tight">
-                            My Portfolio
-                        </p>
+                        <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                            Istiak Ahamed
+                        </span>
                     </Link>
                 </div>
 
