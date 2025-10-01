@@ -1,11 +1,11 @@
 "use client";
 
-import AboutSection from "../Components/AboutSection/AboutSection";
-import Banner from "../Components/Banner/Banner";
-import ContactSection from "../Components/ContactSection/ContactSection";
-import EducationJourney from "../Components/EducationJourney/EducationJourney";
-import ProjectSection from "../Components/ProjectSection/ProjectSection";
-import SkillSection from "../Components/SkillSection/SkillSection";
+import AboutSection from "../components/AboutSection/AboutSection";
+import Banner from "../components/Banner/Banner";
+import ContactSection from "../components/ContactSection/ContactSection";
+import EducationJourney from "../components/EducationJourney/EducationJourney";
+import ProjectSection from "../components/ProjectSection/ProjectSection";
+import SkillSection from "../components/SkillSection/SkillSection";
 
 // import Banner from "@/Components/Banner/Banner";
 // import AboutSection from "@/Components/AboutSection/AboutSection";

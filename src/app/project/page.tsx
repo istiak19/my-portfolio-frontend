@@ -1,6 +1,6 @@
 // import Projects from "@/Components/Projects/Projects";
 
-import Projects from "@/src/Components/Projects/Projects";
+import Projects from "@/src/components/Projects/Projects";
 
 export const metadata = {
     title: "Istiak Ahamed – Project",

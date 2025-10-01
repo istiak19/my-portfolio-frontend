@@ -1,4 +1,4 @@
-import ProjectDetails from "@/src/Components/Projects/projectDetails";
+import ProjectDetails from "@/src/components/Projects/projectDetails";
 
 export const metadata = {
     title: "Istiak Ahamed – Project Details",

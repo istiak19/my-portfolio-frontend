@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import { useState } from "react";
 import logo from "../../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
+import { FaSignInAlt } from "react-icons/fa";
 import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
 
 interface NavLink {
@@ -77,21 +78,21 @@ const Navbar: React.FC = () => {
                     {/* Theme Change Button */}
                     <ModeToggle />
 
-                    {/* Resume Button (Desktop only) */}
+                    {/* Login Button (Desktop) */}
+                    <Link
+                        href="/login"
+                        className="group relative inline-flex items-center gap-2 px-5 py-3 rounded-full border border-sky-500/30 backdrop-blur-md   bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-fuchsia-500/10 text-gray-800 dark:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                    >
+                        <FaSignInAlt className="text-lg group-hover:text-sky-400 transition-colors" />
+                    </Link>
+
+                    {/* Resume Button (Desktop) */}
                     <button
                         onClick={handleResumeDownload}
-                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md 
-             bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10 
-             text-gray-800 dark:text-white transition-all duration-300 ease-in-out 
-             shadow-md hover:shadow-lg cursor-pointer"
+                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md  bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10  text-gray-800 dark:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                     >
                         <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
-                        <span className="font-medium text-gray-800 dark:text-white 
-                   group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-indigo-500 group-hover:to-fuchsia-500 
-                   group-hover:bg-clip-text group-hover:text-transparent">
-                            Download Resume
-                        </span>
-                        <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                        <span className="font-medium">Download Resume</span>
                     </button>
 
                     {/* Mobile Menu Button */}
@@ -108,9 +109,19 @@ const Navbar: React.FC = () => {
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             {isOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
                             ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
                             )}
                         </svg>
                     </button>
@@ -125,24 +136,38 @@ const Navbar: React.FC = () => {
                             <Link
                                 href={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`block w-full py-1 ${isActive(link.path) ? "text-blue-500 font-semibold" : "hover:text-blue-400"
+                                className={`block w-full py-1 ${isActive(link.path)
+                                    ? "text-blue-500 font-semibold"
+                                    : "hover:text-blue-400"
                                     }`}
                             >
                                 {link.name}
                             </Link>
                         </li>
                     ))}
+
+                    {/* Login (Mobile) */}
+                    <li className="w-full">
+                        <Link
+                            href="/login"
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center gap-2 py-2 hover:text-blue-400"
+                        >
+                            <FaSignInAlt />
+                        </Link>
+                    </li>
+
+                    {/* Resume (Mobile) */}
                     <li className="w-full pt-2">
                         <button
                             onClick={() => {
                                 setIsOpen(false);
                                 handleResumeDownload();
                             }}
-                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md  transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full text-white border border-emerald-500/30 bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                         >
                             <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
                             <span className="font-medium">Download Resume</span>
-                            <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                         </button>
                     </li>
                 </ul>

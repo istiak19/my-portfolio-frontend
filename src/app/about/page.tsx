@@ -1,6 +1,6 @@
 // import AboutPage from "@/Components/AboutPage/AboutPage";
 
-import AboutPage from "@/src/Components/AboutPage/AboutPage";
+import AboutPage from "@/src/components/AboutPage/AboutPage";
 
 export const metadata = {
     title: "Istiak Ahamed – About",

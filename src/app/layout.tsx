@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 import { ThemeProvider } from "../Provider/Theme-provider";
 
 const roboto = Roboto({

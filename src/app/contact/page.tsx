@@ -1,6 +1,6 @@
 // import Contact from "@/Components/Contact/Contact";
 
-import Contact from "@/src/Components/Contact/Contact";
+import Contact from "@/src/components/Contact/Contact";
 
 export const metadata = {
     title: "Istiak Ahamed – Contact",
