@@ -1,6 +1,5 @@
-// import AboutPage from "@/Components/AboutPage/AboutPage";
-
 import AboutPage from "@/src/components/AboutPage/AboutPage";
+import { getAboutData } from "@/src/services/aboutServices";
 
 export const metadata = {
     title: "Istiak Ahamed – About",
@@ -8,12 +7,9 @@ export const metadata = {
         "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React, and MongoDB.",
 };
 
-const page = () => {
-    return (
-        <div>
-            <AboutPage />
-        </div>
-    );
+const Page = async () => {
+    const about = await getAboutData();
+    return <AboutPage about={about?.data ?? null} />;
 };
 
-export default page;
+export default Page;
