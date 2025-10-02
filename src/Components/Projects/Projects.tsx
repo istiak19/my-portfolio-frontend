@@ -4,48 +4,69 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
-import { SparklesCore } from "../ui/Sparkles/sparkles"; // Ensure this file exists
+import { SparklesCore } from "../ui/Sparkles/sparkles";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-const projects = [
-    {
-        id: 1,
-        title: "Nirapod Parcel",
-        image: "/project/nirapod.png",
-        viewLink: "https://nirapod-parcel.netlify.app/",
-        githubLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
-    },
-    {
-        id: 2,
-        title: "BloodBanker",
-        image: "/project/BloodProject.png",
-        viewLink: "https://bloodbanker-567f0.web.app/",
-        githubLink: "https://github.com/istiak19/BloodBanker-client",
-    },
-    {
-        id: 3,
-        title: "EduGenie",
-        image: "/project/eduGenie.png",
-        viewLink: "https://genies-two.vercel.app/",
-        githubLink: "https://github.com/istiak19/EduGenie",
-    },
-    {
-        id: 4,
-        title: "EduCircle",
-        image: "/project/eduProject.png",
-        viewLink: "https://educircle-839d0.web.app/",
-        githubLink: "https://github.com/istiak19/EduCircle-client",
-    },
-    {
-        id: 5,
-        title: "Fundsphere",
-        image: "/project/fundProject.png",
-        viewLink: "https://fundsphere-website.web.app/",
-        githubLink: "https://github.com/istiak19/assignment-10-client",
-    },
-];
+// const projects = [
+//     {
+//         id: 1,
+//         title: "Nirapod Parcel",
+//         image: "/project/nirapod.png",
+//         viewLink: "https://nirapod-parcel.netlify.app/",
+//         githubLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
+//     },
+//     {
+//         id: 2,
+//         title: "BloodBanker",
+//         image: "/project/BloodProject.png",
+//         viewLink: "https://bloodbanker-567f0.web.app/",
+//         githubLink: "https://github.com/istiak19/BloodBanker-client",
+//     },
+//     {
+//         id: 3,
+//         title: "EduGenie",
+//         image: "/project/eduGenie.png",
+//         viewLink: "https://genies-two.vercel.app/",
+//         githubLink: "https://github.com/istiak19/EduGenie",
+//     },
+//     {
+//         id: 4,
+//         title: "EduCircle",
+//         image: "/project/eduProject.png",
+//         viewLink: "https://educircle-839d0.web.app/",
+//         githubLink: "https://github.com/istiak19/EduCircle-client",
+//     },
+//     {
+//         id: 5,
+//         title: "Fundsphere",
+//         image: "/project/fundProject.png",
+//         viewLink: "https://fundsphere-website.web.app/",
+//         githubLink: "https://github.com/istiak19/assignment-10-client",
+//     },
+// ];
 
-const Projects = () => {
+export type IProject = {
+    id: number;
+    title: string;
+    description: string;
+    challenges?: string;
+    improvements?: string;
+    technologies: string;
+    serverLink?: string;
+    clientLink?: string;
+    liveLink?: string;
+    features: string[];
+    image: string;
+    createdAt: string;
+    updatedAt: string;
+};
+
+type ProjectsProps = {
+    projects: IProject[];
+};
+
+const Projects = ({ projects }: ProjectsProps) => {
+
     return (
         <div className="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
             <div className="container mx-auto py-16 px-4 md:px-6 text-center">
@@ -74,7 +95,7 @@ const Projects = () => {
 
                 {/* Project Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {projects.map((project, index) => (
+                    {projects.map((project: IProject, index: number) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 40 }}
@@ -101,7 +122,7 @@ const Projects = () => {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                                 <a
-                                    href={project.viewLink}
+                                    href={project.liveLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
@@ -119,7 +140,7 @@ const Projects = () => {
 
                             <div className="flex justify-center">
                                 <a
-                                    href={project.githubLink}
+                                    href={project.clientLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"

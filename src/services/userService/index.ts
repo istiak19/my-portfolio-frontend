@@ -1,6 +1,6 @@
 export const meUser = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/me`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/me/1`, {
             method: "GET",
             credentials: "include",
         });
