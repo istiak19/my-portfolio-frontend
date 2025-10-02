@@ -6,11 +6,7 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight } from 'lucide-react';
 import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
-import { IProject } from "./Projects";
-
-interface ProjectCardProps {
-    project: IProject;
-}
+import { ProjectCardProps } from "@/src/type";
 
 const ProjectDetails = ({ project }: ProjectCardProps) => {
     // const projects = [
