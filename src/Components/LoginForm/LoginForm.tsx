@@ -42,8 +42,10 @@ const LoginForm = () => {
                 console.error(data?.message || "Login failed");
                 return;
             }
-
-            router.push("/dashboard");
+            if (data.success === true) {
+                window.location.href = "/dashboard";
+                console.log(data)
+            }
         } catch (err) {
             console.error(err);
         } finally {

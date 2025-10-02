@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "../Provider/Theme-provider";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           enableSystem
           disableTransitionOnChange>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
