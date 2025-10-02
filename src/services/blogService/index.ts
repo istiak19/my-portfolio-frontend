@@ -1,6 +1,6 @@
-export const getProjects = async () => {
+export const getBlogs = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/project`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`, {
             method: "GET",
             credentials: "include",
             next: { revalidate: 60 }
@@ -18,9 +18,9 @@ export const getProjects = async () => {
     }
 };
 
-export const getProjectById = async (id: number) => {
+export const getBlogById = async (id: number) => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/project/${id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/${id}`, {
             method: "GET",
             next: { revalidate: 60 }
         });

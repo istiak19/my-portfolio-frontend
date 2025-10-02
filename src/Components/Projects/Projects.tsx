@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { SparklesCore } from "../ui/Sparkles/sparkles";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { IProject, ProjectsProps } from "@/src/type";
 
 // const projects = [
 //     {
@@ -44,26 +45,6 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 //         githubLink: "https://github.com/istiak19/assignment-10-client",
 //     },
 // ];
-
-export type IProject = {
-    id: number;
-    title: string;
-    description: string;
-    challenges?: string;
-    improvements?: string;
-    technologies: string;
-    serverLink?: string;
-    clientLink?: string;
-    liveLink?: string;
-    features: string[];
-    image: string;
-    createdAt: string;
-    updatedAt: string;
-};
-
-type ProjectsProps = {
-    projects: IProject[];
-};
 
 const Projects = ({ projects }: ProjectsProps) => {
 
