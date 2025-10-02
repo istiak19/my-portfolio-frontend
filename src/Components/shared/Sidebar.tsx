@@ -31,7 +31,7 @@ export default function Sidebar() {
     };
 
     return (
-        <aside className="flex h-screen w-64 flex-col border-r bg-black text-white">
+        <aside className="flex w-72 flex-col border-r bg-black text-white">
             <div className="p-5">
                 <Link href="/" className="flex items-center group">
                     <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform duration-200">
@@ -50,6 +50,13 @@ export default function Sidebar() {
                 >
                     <Home className="h-4 w-4" />
                     Home
+                </Link>
+                <Link
+                    href="/dashboard/project"
+                    className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-gray-100 hover:text-black"
+                >
+                    <PlusCircle className="h-4 w-4" />
+                    Project create
                 </Link>
 
                 <Link

@@ -1,4 +1,5 @@
 import Projects from "@/src/components/Projects/Projects";
+import { getProjects } from "@/src/services/projectServices";
 
 export const metadata = {
     title: "Istiak Ahamed – Project",
@@ -6,10 +7,12 @@ export const metadata = {
         "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React, and MongoDB.",
 };
 
-const page = () => {
+const page = async() => {
+    const projects = await getProjects();
+    
     return (
         <div>
-            <Projects />
+            <Projects projects={projects}/>
         </div>
     );
 };
