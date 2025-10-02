@@ -21,3 +21,12 @@ export type ProjectsProps = {
 export interface ProjectCardProps {
     project: IProject;
 };
+
+export type Blog = {
+    id: number;
+    title: string;
+    slug: string;
+    content: string;
+    published: boolean;
+    image: string;
+};
