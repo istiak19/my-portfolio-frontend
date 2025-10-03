@@ -1,12 +1,6 @@
 import ProjectDetails from "@/src/components/Projects/projectDetails";
 import { getProjectById } from "@/src/services/projectServices";
 
-interface PageProps {
-    params: {
-        id: string;
-    };
-}
-
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const projectId = Number(id);

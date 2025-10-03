@@ -24,18 +24,6 @@ const BlogDetails = ({ blog }: BlogCardProps) => {
                 </div>
             )}
 
-            {/* Published Status */}
-            <div className="mb-4">
-                <span
-                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${blog.published
-                        ? "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100"
-                        : "bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100"
-                        }`}
-                >
-                    {blog.published ? "Published" : "Unpublished"}
-                </span>
-            </div>
-
             {/* Content */}
             <div className="prose dark:prose-invert max-w-none mb-6">
                 <p>{blog.content}</p>

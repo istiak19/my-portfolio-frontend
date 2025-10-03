@@ -91,7 +91,7 @@ const LoginForm = () => {
 
                     <Button
                         type="submit"
-                        className="w-full cursor-pointer bg-sky-500 hover:bg-sky-600 text-white"
+                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 font-semibold border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                         disabled={isLoading}
                     >
                         {isLoading ? "Signing in..." : "Sign in"}
