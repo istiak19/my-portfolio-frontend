@@ -37,6 +37,7 @@ const LoginForm = () => {
             });
 
             const data = await res.json();
+            console.log(data)
 
             if (!res.ok) {
                 console.error(data?.message || "Login failed");

@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaSignInAlt } from "react-icons/fa";
 import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
-import { NavLink } from "@/src/type";
+import { NavbarProps, NavLink } from "@/src/type";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ isLoggedIn }) => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -25,9 +25,9 @@ const Navbar: React.FC = () => {
         { name: "Contact", path: "/contact" },
     ];
 
-    const resumeViewLink: string =
+    const resumeViewLink =
         "https://drive.google.com/file/d/1NylUXKExZJz_kw984n_ZcdY30DyJwnYb/view?usp=sharing";
-    const resumeDownloadLink: string =
+    const resumeDownloadLink =
         "https://drive.google.com/uc?export=download&id=1NylUXKExZJz_kw984n_ZcdY30DyJwnYb";
 
     const handleResumeDownload = (): void => {
@@ -70,23 +70,40 @@ const Navbar: React.FC = () => {
                                 </Link>
                             </li>
                         ))}
+
+                        {/* Conditional Dashboard/Login */}
+                        {isLoggedIn ? (
+                            <li>
+                                <Link
+                                    href="/dashboard"
+                                    className={`transition-colors duration-200 ${isActive("/dashboard")
+                                        ? "bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-transparent bg-clip-text drop-shadow-md animate-text-gradient font-semibold"
+                                        : "text-gray-700 hover:text-green-500 dark:text-white"
+                                        }`}
+                                >
+                                    Dashboard
+                                </Link>
+                            </li>
+                        ) : (
+                            <li>
+                                <Link
+                                    href="/login"
+                                    className="flex items-center gap-1 text-gray-700 dark:text-white hover:text-blue-500 transition"
+                                >
+                                    <FaSignInAlt />
+                                    Login
+                                </Link>
+                            </li>
+                        )}
                     </ul>
 
                     {/* Theme Change Button */}
                     <ModeToggle />
 
-                    {/* Login Button (Desktop) */}
-                    <Link
-                        href="/login"
-                        className="group relative inline-flex items-center gap-2 px-5 py-3 rounded-full border border-sky-500/30 backdrop-blur-md   bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-fuchsia-500/10 text-gray-800 dark:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
-                    >
-                        <FaSignInAlt className="text-lg group-hover:text-sky-400 transition-colors" />
-                    </Link>
-
-                    {/* Resume Button (Desktop) */}
+                    {/* Resume Button */}
                     <button
                         onClick={handleResumeDownload}
-                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md  bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10  text-gray-800 dark:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full border border-emerald-500/30 backdrop-blur-md  bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10 text-gray-800 dark:text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
                     >
                         <IoCloudDownloadOutline className="text-xl transition-transform duration-300 group-hover:rotate-[-15deg]" />
                         <span className="font-medium">Download Resume</span>
@@ -113,12 +130,7 @@ const Navbar: React.FC = () => {
                                     d="M6 18L18 6M6 6l12 12"
                                 />
                             ) : (
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                             )}
                         </svg>
                     </button>
@@ -133,25 +145,33 @@ const Navbar: React.FC = () => {
                             <Link
                                 href={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`block w-full py-1 ${isActive(link.path)
-                                    ? "text-blue-500 font-semibold"
-                                    : "hover:text-blue-400"
-                                    }`}
+                                className={`block w-full py-1 ${isActive(link.path) ? "text-blue-500 font-semibold" : "hover:text-blue-400"}`}
                             >
                                 {link.name}
                             </Link>
                         </li>
                     ))}
 
-                    {/* Login (Mobile) */}
+                    {/* Conditional Dashboard/Login (Mobile) */}
                     <li className="w-full">
-                        <Link
-                            href="/login"
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center gap-2 py-2 hover:text-blue-400"
-                        >
-                            <FaSignInAlt />
-                        </Link>
+                        {isLoggedIn ? (
+                            <Link
+                                href="/dashboard"
+                                onClick={() => setIsOpen(false)}
+                                className="block w-full py-2 hover:text-green-400"
+                            >
+                                Dashboard
+                            </Link>
+                        ) : (
+                            <Link
+                                href="/login"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full py-2 hover:text-blue-400 flex items-center gap-1"
+                            >
+                                <FaSignInAlt />
+                                Login
+                            </Link>
+                        )}
                     </li>
 
                     {/* Resume (Mobile) */}

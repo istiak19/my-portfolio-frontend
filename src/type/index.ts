@@ -3,6 +3,10 @@ export interface NavLink {
     path: string;
 };
 
+export interface NavbarProps {
+    isLoggedIn?: boolean;
+};
+
 export interface IProject {
     id: number;
     title: string;
@@ -44,4 +48,15 @@ export interface BlogProps {
 
 export interface BlogCardProps {
     blog: IBlog;
+};
+
+export interface User {
+    name: string;
+    email: string;
+};
+
+export interface ApiResponse<T> {
+    success: boolean;
+    data?: T;
+    message?: string;
 };
