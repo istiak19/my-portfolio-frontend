@@ -8,11 +8,7 @@ import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaSignInAlt } from "react-icons/fa";
 import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
-
-interface NavLink {
-    name: string;
-    path: string;
-}
+import { NavLink } from "@/src/type";
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
@@ -25,6 +21,7 @@ const Navbar: React.FC = () => {
         { name: "About", path: "/about" },
         { name: "Skills", path: "/skills" },
         { name: "Projects", path: "/project" },
+        { name: "Blog", path: "/blog" },
         { name: "Contact", path: "/contact" },
     ];
 

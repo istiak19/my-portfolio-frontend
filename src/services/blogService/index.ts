@@ -3,7 +3,10 @@ export const getBlogs = async () => {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`, {
             method: "GET",
             credentials: "include",
-            next: { revalidate: 60 }
+            next: {
+                revalidate: 60,
+                tags: ["BLOGS"]
+            }
         });
 
         if (!res.ok) {
