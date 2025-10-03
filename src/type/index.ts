@@ -1,4 +1,9 @@
-export type IProject = {
+export interface NavLink {
+    name: string;
+    path: string;
+};
+
+export interface IProject {
     id: number;
     title: string;
     description: string;
@@ -14,7 +19,7 @@ export type IProject = {
     updatedAt: string;
 };
 
-export type ProjectsProps = {
+export interface ProjectsProps {
     projects: IProject[];
 };
 
@@ -28,5 +33,15 @@ export interface IBlog {
     slug: string;
     content: string;
     published: boolean;
-    image: string
+    image: string;
+    createdAt?: string;
+    updatedAt?: string;
+};
+
+export interface BlogProps {
+    blogs: IBlog[];
+}
+
+export interface BlogCardProps {
+    blog: IBlog;
 };

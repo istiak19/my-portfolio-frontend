@@ -1,6 +1,5 @@
 import ProjectDetails from "@/src/components/Projects/projectDetails";
 import { getProjectById } from "@/src/services/projectServices";
-import { Metadata } from "next";
 
 interface PageProps {
     params: {
@@ -27,7 +26,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ id: strin
 }
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-     const { id } = await params;
+    const { id } = await params;
     const project = await getProjectById(Number(id));
 
     if (!project) {
