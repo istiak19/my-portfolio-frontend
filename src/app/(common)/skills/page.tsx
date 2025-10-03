@@ -1,7 +1,7 @@
 import Skills from "@/src/components/Skills/Skills";
 
 export const metadata = {
-    title: "Istiak Ahamed – Skills",
+    title: "Skills – Istiak Ahamed",
     description: "A list of technologies and skills I work with.",
 };
 

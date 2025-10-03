@@ -4,6 +4,12 @@ import image from "../../../public/diu.jpg";
 import Link from "next/link";
 import logo from "../../../public/logo.png";
 
+export const metadata = {
+    title: "Login – Istiak Ahamed",
+    description:
+        "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React, and MongoDB.",
+};
+
 const Login = () => {
     return (
         <div className="grid min-h-screen lg:grid-cols-2 bg-background text-foreground">
