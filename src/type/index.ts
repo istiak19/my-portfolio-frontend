@@ -22,11 +22,11 @@ export interface ProjectCardProps {
     project: IProject;
 };
 
-export type Blog = {
+export interface IBlog {
     id: number;
     title: string;
     slug: string;
     content: string;
     published: boolean;
-    image: string;
+    image: string
 };

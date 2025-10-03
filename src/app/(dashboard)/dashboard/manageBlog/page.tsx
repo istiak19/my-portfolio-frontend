@@ -1,14 +1,14 @@
+import ManageBlog from "@/src/components/ManageBlog/ManageBlog";
 import { getBlogs } from "@/src/services/blogService";
 
-const ManageBlog = async () => {
+const Manage = async () => {
     const blogs = await getBlogs();
-    // console.log(blogs);
 
     return (
         <div>
-            {/* <ManageBlogs /> */}
+            <ManageBlog blogs={blogs} />
         </div>
     );
 };
 
-export default ManageBlog;
+export default Manage;
