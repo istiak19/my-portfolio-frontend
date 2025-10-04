@@ -1,6 +1,6 @@
 import LoginForm from "@/src/components/LoginForm/LoginForm";
 import Image from "next/image";
-import image from "../../../public/diu.jpg";
+import image from "../../../public/login.jpg";
 import Link from "next/link";
 import logo from "../../../public/logo.png";
 

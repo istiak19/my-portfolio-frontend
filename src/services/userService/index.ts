@@ -1,18 +1,18 @@
-export const meUser = async () => {
+import { ApiResponse, User } from "@/src/type";
+
+export const meUser = async (token: string): Promise<ApiResponse<User>> => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/me/1`, {
-            method: "GET",
-            credentials: "include",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+            cache: "no-store",
         });
 
-        if (!res.ok) {
-            return null;
-        }
         const data = await res.json();
-        return data?.data || null;
-
-    } catch (error) {
-        console.error("Error fetching user:", error);
-        return null;
+        return data;
+    } catch (err) {
+        console.error("Failed to fetch user:", err);
+        return { success: false, message: "Failed to fetch user" };
     }
 };

@@ -1,6 +1,12 @@
 import BlogDetails from "@/src/components/Blog/BlogDetails";
 import { getBlogById } from "@/src/services/blogService";
 
+export const generateStaticParams = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`);
+    const { data: blogs } = await res.json();
+    return blogs.slice(0, 2).map((blog: any) => ({ id: String(blog.id) }));
+};
+
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const blogId = Number(id);

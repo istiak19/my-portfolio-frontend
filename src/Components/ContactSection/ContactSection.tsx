@@ -114,7 +114,7 @@ const ContactSection = () => {
                             />
                             <button
                                 type="submit"
-                                className="mt-auto w-full py-3 cursor-pointer bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-white rounded-lg font-medium hover:opacity-90 transition-all"
+                                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 w-full font-semibold rounded-md cursor-pointer border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                             >
                                 Send Message
                             </button>
