@@ -5,10 +5,12 @@ import { IBlog } from "@/src/type";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
 import { Button } from "../ui/button";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 const ManageBlog = () => {
+    const router = useRouter();
     const { data, mutate, error } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/blog`, fetcher, {
         refreshInterval: 10000,
     });
@@ -37,8 +39,8 @@ const ManageBlog = () => {
     };
 
     const handleUpdate = (id: number) => {
-        toast("✏️ Edit blog modal খুলবে এখানে!");
         console.log("Update blog:", id);
+        router.push(`/dashboard/updateBlog/${id}`)
     };
 
     const handleDelete = async (id: number) => {
