@@ -5,31 +5,15 @@ import { Home, PlusCircle, LogOut } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
-import { useRouter } from "next/navigation";
 import { ModeToggle } from "../ui/ThemeToggleButton/ThemeToggleButton";
-import { toast, Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
+import { signOut } from "next-auth/react";
 
 export default function Sidebar() {
-    const router = useRouter();
 
-    const handleLogout = async () => {
-        try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/logout`, {
-                method: "POST",
-                credentials: "include",
-                headers: { "Content-Type": "application/json" },
-            });
-
-            if (res.ok) {
-                toast.success("Logged out successfully!");
-                router.push("/login");
-            } else {
-                toast.error("Logout failed!");
-            }
-        } catch (err) {
-            console.error("Error logging out:", err);
-            toast.error("An error occurred during logout!");
-        }
+    const handleLogout = () => {
+        toast.success("Logging out...");
+        signOut({ callbackUrl: "/" });
     };
 
     const links = [
