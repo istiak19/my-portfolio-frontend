@@ -28,6 +28,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ id: strin
 const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const blog = await getBlogById(Number(id));
+    
     return (
         <div>
             <BlogDetails blog={blog} />

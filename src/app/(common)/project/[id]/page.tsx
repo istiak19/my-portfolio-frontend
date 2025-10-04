@@ -25,8 +25,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
     if (!project) {
         return <div className="text-center mt-20">Project not found</div>;
-    }
-
+    };
+    
     return (
         <div>
             <ProjectDetails project={project} />
