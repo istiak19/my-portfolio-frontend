@@ -19,7 +19,7 @@ const BlogDetails = ({ blog }: BlogCardProps) => {
                         src={blog.image}
                         alt={blog.title}
                         fill
-                        className="object-cover"
+                        className="h-[300px]"
                     />
                 </div>
             )}
