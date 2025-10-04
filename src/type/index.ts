@@ -7,6 +7,31 @@ export interface NavbarProps {
     isLoggedIn?: boolean;
 };
 
+export type Skills = {
+    frontend: string[];
+    backend: string[];
+    database: string[];
+    toolsAndPlatforms: string[];
+    softSkills: string[];
+};
+
+export type Hobby = {
+    title: string;
+    description: string;
+};
+
+export type AboutData = {
+    location: string;
+    introduction: string;
+    skills: Skills;
+    journey: string;
+    hobbies: Hobby[];
+};
+
+export type AboutResponse = {
+    data: AboutData;
+};
+
 export interface IProject {
     id: number;
     title: string;
@@ -51,6 +76,7 @@ export interface BlogCardProps {
 };
 
 export interface User {
+    id: number;
     name: string;
     email: string;
 };

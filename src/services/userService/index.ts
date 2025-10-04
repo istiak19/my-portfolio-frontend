@@ -6,7 +6,6 @@ export const meUser = async (token: string): Promise<ApiResponse<User>> => {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
-            cache: "no-store",
         });
 
         const data = await res.json();
