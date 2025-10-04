@@ -3,12 +3,25 @@
 import { BlogProps } from "@/src/type";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-const Blog = ({ blogs }: BlogProps) => {
+const textVariant = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 0) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.2,
+            duration: 0.6,
+        },
+    }),
+};
+
+const BlogGrid = ({ blogs }: BlogProps) => {
     return (
         <div className="container mx-auto px-6 py-12">
             <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-                Blog Highlights
+                Insights & Stories
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -43,8 +56,23 @@ const Blog = ({ blogs }: BlogProps) => {
                     </div>
                 ))}
             </div>
+
+            {/* See More Button */}
+            <motion.div
+                variants={textVariant}
+                custom={4}
+                className="mt-16 flex justify-center"
+            >
+                <Link href="/blog">
+                    <button className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient border border-emerald-500/30 bg-transparent backdrop-blur-md hover:text-indigo-500 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                    >
+                        <span>See More →</span>
+                        <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+                    </button>
+                </Link>
+            </motion.div>
         </div>
     );
 };
 
-export default Blog;
+export default BlogGrid;
