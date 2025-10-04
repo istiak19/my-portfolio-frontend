@@ -11,7 +11,6 @@ export const generateStaticParams = async () => {
     return blogs.slice(0, 2).map((blog: any) => ({ id: String(blog.id) }));
 };
 
-// Metadata generation
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const blogId = Number(id);
