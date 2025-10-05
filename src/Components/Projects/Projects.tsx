@@ -8,44 +8,6 @@ import { SparklesCore } from "../ui/Sparkles/sparkles";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { IProject, ProjectsProps } from "@/src/type";
 
-// const projects = [
-//     {
-//         id: 1,
-//         title: "Nirapod Parcel",
-//         image: "/project/nirapod.png",
-//         viewLink: "https://nirapod-parcel.netlify.app/",
-//         githubLink: "https://github.com/istiak19/Nirapod-Parcel-Frontend",
-//     },
-//     {
-//         id: 2,
-//         title: "BloodBanker",
-//         image: "/project/BloodProject.png",
-//         viewLink: "https://bloodbanker-567f0.web.app/",
-//         githubLink: "https://github.com/istiak19/BloodBanker-client",
-//     },
-//     {
-//         id: 3,
-//         title: "EduGenie",
-//         image: "/project/eduGenie.png",
-//         viewLink: "https://genies-two.vercel.app/",
-//         githubLink: "https://github.com/istiak19/EduGenie",
-//     },
-//     {
-//         id: 4,
-//         title: "EduCircle",
-//         image: "/project/eduProject.png",
-//         viewLink: "https://educircle-839d0.web.app/",
-//         githubLink: "https://github.com/istiak19/EduCircle-client",
-//     },
-//     {
-//         id: 5,
-//         title: "Fundsphere",
-//         image: "/project/fundProject.png",
-//         viewLink: "https://fundsphere-website.web.app/",
-//         githubLink: "https://github.com/istiak19/assignment-10-client",
-//     },
-// ];
-
 const Projects = ({ projects }: ProjectsProps) => {
 
     return (

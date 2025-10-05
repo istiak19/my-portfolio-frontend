@@ -19,16 +19,20 @@ const textVariant = {
 
 const BlogGrid = ({ blogs }: BlogProps) => {
     return (
-        <div className="container mx-auto px-6 py-12">
+        <div className="container mx-auto px-6 py-12 bg-white dark:bg-black">
             <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
                 Insights & Stories
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                {blogs.map((blog) => (
-                    <div
+                {blogs.map((blog, index) => (
+                    <motion.div
                         key={blog.id}
-                        className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="flex flex-col justify-between"
                     >
                         {/* Blog Image */}
                         <div className="relative w-full h-64">
@@ -53,7 +57,7 @@ const BlogGrid = ({ blogs }: BlogProps) => {
                                 Read More
                             </Link>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

@@ -96,7 +96,7 @@ const ProjectGrid = ({ projects }: ProjectsProps) => {
                         ))
                     ) : (
                         <p className="text-gray-500 dark:text-gray-400 col-span-full text-center">
-                            🚧 No projects found.
+                            No projects found.
                         </p>
                     )}
                 </div>

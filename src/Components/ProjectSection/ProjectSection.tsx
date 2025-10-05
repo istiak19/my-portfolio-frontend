@@ -9,7 +9,10 @@ const ProjectSection = () => {
     const [projects, setProjects] = useState<IProject[]>([]);
 
     useEffect(() => {
-        getProjects().then((data) => setProjects(data));
+        getProjects().then((data) => {
+            const project = data.slice(0, 3);
+            setProjects(project);
+        });
     }, []);
 
     return (
