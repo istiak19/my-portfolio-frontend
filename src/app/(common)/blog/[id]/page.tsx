@@ -1,8 +1,12 @@
 import BlogDetails from "@/src/components/Blog/BlogDetails";
 import { getBlogById } from "@/src/services/blogService";
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+
 export const generateStaticParams = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`);
+    const res = await fetch(`${BASE_URL}/blog`, { cache: "no-store" });
+    if (!res.ok) return [];
+
     const { data: blogs } = await res.json();
     return blogs.slice(0, 2).map((blog: any) => ({ id: String(blog.id) }));
 };
@@ -28,7 +32,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ id: strin
 const BlogPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const blog = await getBlogById(Number(id));
-    
+
     return (
         <div>
             <BlogDetails blog={blog} />

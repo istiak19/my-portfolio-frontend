@@ -1,37 +1,19 @@
-export type Skills = {
-    frontend: string[];
-    backend: string[];
-    database: string[];
-    toolsAndPlatforms: string[];
-    softSkills: string[];
-};
+import { AboutResponse } from "@/src/type";
 
-export type Hobby = {
-    title: string;
-    description: string;
-};
-
-export type AboutData = {
-    location: string;
-    introduction: string;
-    skills: Skills;
-    journey: string;
-    hobbies: Hobby[];
-};
-
-export type AboutResponse = {
-    data: AboutData;
-};
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const getAboutData = async (): Promise<AboutResponse | null> => {
+    if (!API_URL) {
+        console.warn("NEXT_PUBLIC_API_URL is missing");
+        return null;
+    }
+
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/info`, {
-            cache: "force-cache",
-        });
+        const res = await fetch(`${API_URL}/info`, { cache: "force-cache" });
         if (!res.ok) throw new Error("Failed to fetch about data");
         return await res.json();
     } catch (error) {
-        console.error(error);
+        console.error("Error in getAboutData:", error);
         return null;
     }
 };

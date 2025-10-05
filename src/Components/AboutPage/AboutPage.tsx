@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import profileImg from "../../../public/Anik.jpg";
 import { FaPlane, FaUtensils, FaBookOpen, FaCamera, FaHeart } from "react-icons/fa";
 import { BackgroundBeamsWithCollision } from "../ui/BackgroundBeamsWithCollision/background-beams-with-collision";
-import { AboutData } from "@/src/services/aboutServices";
 import React from "react";
+import { AboutData } from "@/src/type";
 
 const AboutPage = ({ about }: { about: AboutData | null }) => {
     const hobbyIcons: Record<string, React.ReactNode> = {

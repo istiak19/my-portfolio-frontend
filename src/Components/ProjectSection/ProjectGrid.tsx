@@ -37,56 +37,48 @@ const ProjectGrid = ({ projects }: ProjectsProps) => {
                 </p>
 
                 {/* Project Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project: IProject, index: number) => (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.02 }}
-                            className="flex flex-col justify-between"
-                        >
-                            {/* Project Title */}
-                            <h3 className="text-xl text-left font-bold mb-4 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient"
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {projects && projects.length > 0 ? (
+                        projects.map((project: IProject, index: number) => (
+                            <motion.div
+                                key={project.id}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                className="flex flex-col justify-between"
                             >
-                                {project.title}
-                            </h3>
+                                <h3 className="text-xl font-bold mb-4 text-left bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
+                                    {project.title}
+                                </h3>
 
-                            {/* Project Image */}
-                            <div className="relative mb-6 rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 group">
-                                <div className="relative h-64 w-full overflow-hidden rounded-[10px] bg-gray-100 dark:bg-black">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className="rounded-xl p-2 transition-transform duration-500 group-hover:scale-110"
-                                        style={{ zIndex: 0 }}
-                                    />
+                                <div className="relative mb-6 rounded-xl p-[2px] bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 group">
+                                    <div className="relative h-64 w-full overflow-hidden rounded-[10px] bg-gray-100 dark:bg-gray-900">
+                                        <Image
+                                            src={project.image}
+                                            alt={`${project.title} preview`}
+                                            fill
+                                            className="rounded-xl p-2 transition-transform duration-500 group-hover:scale-110"
+                                            priority
+                                        />
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* Action Buttons */}
-                            <div className="mt-auto">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                                     <a
                                         href={project.liveLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500  text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                     >
-                                        Live Demo
-                                        <ArrowUpRight className="text-indigo-500" />
-                                        <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                                        Live Demo <ArrowUpRight className="text-indigo-500" />
                                     </a>
 
                                     <Link
                                         href={`/project/${project.id}`}
-                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out text-center shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                     >
                                         View Details <ArrowRight className="text-indigo-500" />
-                                        <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
                                     </Link>
                                 </div>
 
@@ -95,16 +87,18 @@ const ProjectGrid = ({ projects }: ProjectsProps) => {
                                         href={project.clientLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient  bg-transparent backdrop-blur-md transition-all duration-300 ease-in-out shadow-md hover:shadow-lg cursor-pointer"
+                                        className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full font-medium border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg"
                                     >
-                                        GitHub Code
-                                        <FaGithub className="text-lg text-indigo-500" />
-                                        <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent w-3/4 mx-auto" />
+                                        GitHub Code <FaGithub className="text-lg text-indigo-500" />
                                     </a>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        ))
+                    ) : (
+                        <p className="text-gray-500 dark:text-gray-400 col-span-full text-center">
+                            No projects found.
+                        </p>
+                    )}
                 </div>
 
                 {/* See More Button */}

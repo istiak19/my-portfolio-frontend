@@ -9,7 +9,9 @@ export const metadata = {
 
 const Page = async () => {
     const about = await getAboutData();
-    return <AboutPage about={about?.data ?? null} />;
+    if (!about?.data) return <div>No data available</div>;
+
+    return <AboutPage about={about?.data} />;
 };
 
 export default Page;

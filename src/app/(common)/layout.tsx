@@ -1,12 +1,12 @@
 import Footer from "@/src/components/Footer/Footer";
 import Navbar from "@/src/components/Navbar/Navbar";
-import { cookies } from "next/headers";
+import { authOptions } from "@/src/helpers/authOptions";
+import { getServerSession } from "next-auth";
 import { ReactNode } from "react";
 
 export default async function CommonLayout({ children }: Readonly<{ children: ReactNode }>) {
-    const cookieStore = await cookies();
-    const token = cookieStore.get("accessToken")?.value;
-    const isLoggedIn = !!token;
+    const session = await getServerSession(authOptions);
+    const isLoggedIn = !!session?.user?.accessToken;
 
     return (
         <>

@@ -9,6 +9,7 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const blogSchema = z.object({
     title: z.string().min(1, 'Title is required'),
@@ -20,6 +21,7 @@ const blogSchema = z.object({
 type BlogFormValues = z.infer<typeof blogSchema>;
 
 const BlogForm = () => {
+    const router = useRouter();
     const [image, setImage] = useState<File | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -55,6 +57,7 @@ const BlogForm = () => {
                 toast.success('Blog created successfully!');
                 reset();
                 setImage(null);
+                router.push("/dashboard/manageBlog")
             } else {
                 toast.error(data.message || 'Failed to create blog');
             }

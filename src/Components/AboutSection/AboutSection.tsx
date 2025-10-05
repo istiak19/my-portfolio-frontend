@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profilePic from "../../../public/Anik.jpg";
-import { AboutResponse, getAboutData } from "@/src/services/aboutServices";
+import { getAboutData } from "@/src/services/aboutServices";
 import { useEffect, useState } from "react";
+import { AboutResponse } from "@/src/type";
 
 // Animation variants
 const textVariant = {
