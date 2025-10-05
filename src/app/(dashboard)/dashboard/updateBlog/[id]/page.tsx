@@ -1,4 +1,4 @@
-import UpdateBlog from "@/src/components/UpdateBlog/UpdateBlog";
+import Blog from "@/src/components/UpdateBlog/Blog";
 import { getBlogById } from "@/src/services/blogService";
 
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
@@ -25,7 +25,7 @@ const Blogs = async ({ params }: { params: Promise<{ id: string }> }) => {
 
     return (
         <div>
-            <UpdateBlog blog={blog} />
+            <Blog blog={blog} />
         </div>
     );
 };

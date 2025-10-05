@@ -1,4 +1,4 @@
-import ManageBlog from "@/src/components/ManageBlog/ManageBlog";
+import Blog from "@/src/components/ManageBlog/Blog";
 
 export const metadata = {
     title: "Manage Blog – Istiak Ahamed",
@@ -10,7 +10,7 @@ const Manage = async () => {
 
     return (
         <div>
-            <ManageBlog />
+            <Blog />
         </div>
     );
 };

@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
-const ManageBlog = () => {
+const ManageBlog = ({ decoded }: { decoded: string }) => {
     const router = useRouter();
     const { data, mutate, error } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/blog`, fetcher, {
         refreshInterval: 10000,
@@ -24,7 +24,10 @@ const ManageBlog = () => {
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/publish/${id}`, {
                 method: "PATCH",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${decoded}`,
+                },
                 body: JSON.stringify({ published: !currentStatus }),
             });
             const result = await res.json();
@@ -47,7 +50,10 @@ const ManageBlog = () => {
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/${id}`, {
                 method: "DELETE",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${decoded}`,
+                },
             });
             const result = await res.json();
             if (result.success) {
