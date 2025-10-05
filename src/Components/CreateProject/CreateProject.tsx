@@ -27,7 +27,7 @@ const projectSchema = z.object({
 
 type ProjectFormValues = z.infer<typeof projectSchema>;
 
-const CreateProject = () => {
+const CreateProject = ({ decoded }: { decoded: string }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const {
@@ -71,13 +71,11 @@ const CreateProject = () => {
         try {
             setIsSubmitting(true);
 
-            // Get access token (example using NextAuth)
-            // import { useSession } from "next-auth/react"
-            // const { data: session } = useSession();
-            const accessToken = ""; // replace with actual token from auth/session
-
             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/project/create-project`, {
                 method: "POST",
+                headers: {
+                    Authorization: `Bearer ${decoded}`,
+                },
                 body: formData,
                 credentials: "include",
             });

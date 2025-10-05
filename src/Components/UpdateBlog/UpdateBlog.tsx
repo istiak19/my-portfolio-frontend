@@ -9,8 +9,8 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { BlogCardProps } from "@/src/type";
 import { useRouter } from "next/navigation";
+import { UpdateBlogProps } from "@/src/type";
 
 const blogSchema = z.object({
     title: z.string().min(1, "Title is required"),
@@ -21,7 +21,7 @@ const blogSchema = z.object({
 
 type BlogFormValues = z.infer<typeof blogSchema>;
 
-const UpdateBlog = ({ blog }: BlogCardProps) => {
+const UpdateBlog = ({ blog, decoded }: UpdateBlogProps) => {
     const router = useRouter();
     const [image, setImage] = useState<File | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +47,9 @@ const UpdateBlog = ({ blog }: BlogCardProps) => {
                 `${process.env.NEXT_PUBLIC_API_URL}/blog/${blog.id}`,
                 {
                     method: "PATCH",
+                    headers: {
+                        Authorization: `Bearer ${decoded}`,
+                    },
                     body: formData,
                 }
             );

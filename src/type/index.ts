@@ -75,6 +75,11 @@ export interface BlogCardProps {
     blog: IBlog;
 };
 
+export interface UpdateBlogProps {
+    blog: IBlog;
+    decoded: string;
+}
+
 export interface User {
     id: number;
     name: string;
