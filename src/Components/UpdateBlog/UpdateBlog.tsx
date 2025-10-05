@@ -10,6 +10,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { BlogCardProps } from "@/src/type";
+import { useRouter } from "next/navigation";
 
 const blogSchema = z.object({
     title: z.string().min(1, "Title is required"),
@@ -21,6 +22,7 @@ const blogSchema = z.object({
 type BlogFormValues = z.infer<typeof blogSchema>;
 
 const UpdateBlog = ({ blog }: BlogCardProps) => {
+    const router = useRouter();
     const [image, setImage] = useState<File | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -52,6 +54,7 @@ const UpdateBlog = ({ blog }: BlogCardProps) => {
             const data = await res.json();
             if (res.ok) {
                 toast.success("Blog updated successfully!");
+                router.push("/dashboard/manageBlog");
             } else {
                 toast.error(data.message || "Failed to update blog");
             }
