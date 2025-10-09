@@ -27,9 +27,9 @@ const AboutPage = ({ about }: { about: AboutData | null }) => {
     }
 
     return (
-        <div className="bg-white dark:bg-black transition-colors duration-300">
+        <div className="bg-white dark:bg-black transition-colors duration-300 px-5">
             <BackgroundBeamsWithCollision>
-                <div className="container mx-auto px-6 py-20">
+                <div className="container mx-auto">
                     <h2 className="text-4xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-8">
                         About Me
                     </h2>
