@@ -10,7 +10,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
             <SessionProvider>
                 <main className="flex flex-1">
                     <Sidebar />
-                    <div className="flex-1">{children}</div>
+                    <div className="flex-1 bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">{children}</div>
                 </main>
                 <Footer />
             </SessionProvider>

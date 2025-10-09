@@ -1,4 +1,4 @@
-import BlogForm from "@/src/components/BlogForm/BlogForm";
+import Blog from "@/src/components/BlogForm/Blog";
 
 export const metadata = {
     title: "Create Blog – Istiak Ahamed",
@@ -6,12 +6,12 @@ export const metadata = {
         "Portfolio of Istiak Ahamed, a passionate full-stack web developer specializing in building modern, responsive web applications using Next.js, React, and MongoDB.",
 };
 
-const Blog = () => {
+const page = () => {
     return (
         <div>
-            <BlogForm />
+            <Blog />
         </div>
     );
 };
 
-export default Blog;
+export default page;
