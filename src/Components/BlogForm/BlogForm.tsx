@@ -20,7 +20,8 @@ const blogSchema = z.object({
 
 type BlogFormValues = z.infer<typeof blogSchema>;
 
-const BlogForm = () => {
+const BlogForm = ({ decoded }: { decoded: string }) => {
+    console.log(decoded)
     const router = useRouter();
     const [image, setImage] = useState<File | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,10 +50,15 @@ const BlogForm = () => {
             setIsSubmitting(true);
             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/create-blog`, {
                 method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${decoded}`,
+                },
                 body: formData,
+                credentials: "include",
             });
 
             const data = await res.json();
+            console.log(data)
             if (res.ok) {
                 toast.success('Blog created successfully!');
                 reset();
@@ -70,36 +76,78 @@ const BlogForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="container mx-auto p-8 bg-white dark:bg-black rounded-2xl shadow-lg space-y-6">
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100">Create Blog</h2>
+        <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="container mx-auto p-8 bg-white dark:bg-black rounded-2xl shadow-lg space-y-6"
+        >
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100">
+                Create Blog
+            </h2>
 
+            {/* Title */}
             <div>
                 <Label htmlFor="title">Title</Label>
-                <Input id="title" {...register('title')} className="mt-1" />
-                {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title.message}</p>}
+                <Input
+                    id="title"
+                    placeholder="Enter an engaging blog title, e.g., 'Mastering Next.js in 2025'"
+                    {...register("title")}
+                    className="mt-1"
+                />
+                {errors.title && (
+                    <p className="text-red-500 text-sm mt-1">{errors.title.message}</p>
+                )}
             </div>
 
+            {/* Slug */}
             <div>
                 <Label htmlFor="slug">Slug</Label>
-                <Input id="slug" {...register('slug')} className="mt-1" />
-                {errors.slug && <p className="text-red-500 text-sm mt-1">{errors.slug.message}</p>}
+                <Input
+                    id="slug"
+                    placeholder="Enter a custom slug, e.g., 'mastering-nextjs-2025'"
+                    {...register("slug")}
+                    className="mt-1"
+                />
+                {errors.slug && (
+                    <p className="text-red-500 text-sm mt-1">{errors.slug.message}</p>
+                )}
             </div>
 
+            {/* Content */}
             <div>
                 <Label htmlFor="content">Content</Label>
-                <Textarea id="content" rows={6} {...register('content')} className="mt-1" />
-                {errors.content && <p className="text-red-500 text-sm mt-1">{errors.content.message}</p>}
+                <Textarea
+                    id="content"
+                    rows={6}
+                    placeholder="Write your full blog content here. Markdown and formatting supported..."
+                    {...register("content")}
+                    className="mt-1"
+                />
+                {errors.content && (
+                    <p className="text-red-500 text-sm mt-1">{errors.content.message}</p>
+                )}
             </div>
 
+            {/* Image Upload */}
             <div>
                 <Label htmlFor="image">Blog Image</Label>
-                <Input type="file" accept="image/*" onChange={(e) => setImage(e.target.files?.[0] ?? null)} className="mt-1" />
+                <Input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => setImage(e.target.files?.[0] ?? null)}
+                    className="mt-1"
+                />
+                <p className="text-sm text-gray-500 mt-1">
+                    Recommended: 1200×630px (for best social sharing preview)
+                </p>
             </div>
 
-            <Button type="submit"
+            {/* Submit Button */}
+            <Button
+                type="submit"
                 className="group relative inline-flex items-center justify-center gap-2 px-6 py-2 text-xl font-semibold w-full border border-emerald-500/30 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient backdrop-blur-md transition duration-300 shadow-md hover:shadow-lg cursor-pointer"
-                disabled={isSubmitting}>
-                {isSubmitting ? 'Creating...' : 'Create Blog'}
+                disabled={isSubmitting}
+            >
+                {isSubmitting ? "Creating..." : "Create Blog"}
             </Button>
         </form>
     );

@@ -67,54 +67,56 @@ const ManageBlog = ({ decoded }: { decoded: string }) => {
     };
 
     return (
-        <div className="p-6">
-            <h1 className="text-xl font-semibold text-center mb-4">Manage Blogs</h1>
-            <Table>
-                <TableHeader>
-                    <TableRow>
-                        <TableHead className="text-center">Title</TableHead>
-                        <TableHead className="text-center">Slug</TableHead>
-                        <TableHead className="text-center">Published</TableHead>
-                        <TableHead className="text-center">Actions</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {blogs.map((blog) => (
-                        <TableRow key={blog.id}>
-                            <TableCell className="text-center">{blog.title}</TableCell>
-                            <TableCell className="text-center">{blog.slug}</TableCell>
-                            <TableCell className="text-center">
-                                <Button
-                                    variant={blog.published ? "default" : "destructive"}
-                                    size="sm"
-                                    className="cursor-pointer"
-                                    onClick={() => handleTogglePublish(blog.id, blog.published)}
-                                >
-                                    {blog.published ? "Published" : "Unpublished"}
-                                </Button>
-                            </TableCell>
-                            <TableCell className="flex gap-2 justify-center">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    className="cursor-pointer"
-                                    onClick={() => handleUpdate(blog.id)}
-                                >
-                                    Update
-                                </Button>
-                                <Button
-                                    variant="destructive"
-                                    size="sm"
-                                    className="cursor-pointer"
-                                    onClick={() => handleDelete(blog.id)}
-                                >
-                                    Delete
-                                </Button>
-                            </TableCell>
+        <div className="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+            <div className="p-6">
+                <h1 className="text-xl font-semibold text-center mb-4">Manage Blogs</h1>
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="text-center">Title</TableHead>
+                            <TableHead className="text-center">Slug</TableHead>
+                            <TableHead className="text-center">Published</TableHead>
+                            <TableHead className="text-center">Actions</TableHead>
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+                    </TableHeader>
+                    <TableBody>
+                        {blogs.map((blog) => (
+                            <TableRow key={blog.id}>
+                                <TableCell className="text-center">{blog.title}</TableCell>
+                                <TableCell className="text-center">{blog.slug}</TableCell>
+                                <TableCell className="text-center">
+                                    <Button
+                                        variant={blog.published ? "default" : "destructive"}
+                                        size="sm"
+                                        className="cursor-pointer"
+                                        onClick={() => handleTogglePublish(blog.id, blog.published)}
+                                    >
+                                        {blog.published ? "Published" : "Unpublished"}
+                                    </Button>
+                                </TableCell>
+                                <TableCell className="flex gap-2 justify-center">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                        onClick={() => handleUpdate(blog.id)}
+                                    >
+                                        Update
+                                    </Button>
+                                    <Button
+                                        variant="destructive"
+                                        size="sm"
+                                        className="cursor-pointer"
+                                        onClick={() => handleDelete(blog.id)}
+                                    >
+                                        Delete
+                                    </Button>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </div>
         </div>
     );
 };
