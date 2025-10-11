@@ -8,6 +8,7 @@ import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
 import { Label } from "@/src/components/ui/label";
 import { toast } from "react-hot-toast";
+import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
 const projectSchema = z.object({
     title: z.string().min(1, "Title is required"),
@@ -210,6 +211,7 @@ const CreateProject = ({ decoded }: { decoded: string }) => {
             >
                 {isSubmitting ? "Uploading..." : "Upload Project"}
             </Button>
+            <BackgroundBeams />
         </form>
     );
 };

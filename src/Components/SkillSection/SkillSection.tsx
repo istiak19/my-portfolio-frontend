@@ -6,12 +6,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux, SiAxios, SiReactquery, SiPrisma } from "react-icons/si";
 import React from "react";
-
-interface Skill {
-    icon: React.ReactElement;
-    label: string;
-    color?: string;
-}
+import { Skill } from "@/src/type";
 
 const frontendSkills: Skill[] = [
     { icon: <FaHtml5 className="w-full h-full p-5 text-[#E34F26]" />, label: "HTML5", color: "#E34F26" },
@@ -19,11 +14,11 @@ const frontendSkills: Skill[] = [
     { icon: <RiTailwindCssFill className="w-full h-full p-5 text-[#38BDF8]" />, label: "TailwindCSS", color: "#38BDF8" },
     { icon: <FaJs className="w-full h-full p-5 text-[#F7DF1E]" />, label: "JavaScript", color: "#F7DF1E" },
     { icon: <FaReact className="w-full h-full p-5 text-[#61DAFB]" />, label: "React.js", color: "#61DAFB" },
-    { icon: <SiNextdotjs className="w-full h-full p-5 text-black dark:text-white" />, label: "Next.js" },
+    { icon: <SiNextdotjs className="w-full h-full p-5 text-black dark:text-white" />, label: "Next.js", color: "" },
     { icon: <SiTypescript className="w-full h-full p-5 text-[#3178C6]" />, label: "TypeScript", color: "#3178C6" },
     { icon: <SiRadixui className="w-full h-full p-5 text-[#61DAFB]" />, label: "shadcn/ui", color: "#61DAFB" },
     { icon: <SiRedux className="w-full h-full p-5 text-[#764ABC]" />, label: "Redux", color: "#764ABC" },
-    { icon: <FaGithub className="w-full h-full p-5 text-gray-900 dark:text-white" />, label: "GitHub" },
+    { icon: <FaGithub className="w-full h-full p-5 text-gray-900 dark:text-white" />, label: "GitHub", color: "" },
     { icon: <SiAxios className="w-full h-full p-5 text-[#5A29E4]" />, label: "Axios", color: "#5A29E4" },
     { icon: <SiReactquery className="w-full h-full p-5 text-[#FF4154]" />, label: "TanStack Query", color: "#FF4154" },
 ];

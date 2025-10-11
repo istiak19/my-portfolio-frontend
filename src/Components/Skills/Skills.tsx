@@ -1,18 +1,13 @@
 "use client";
 
+import React from "react";
 import { motion, Variants } from "framer-motion";
 import { BiLogoFirebase } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaHtml5, FaJs, FaReact, FaNode, FaGithub, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiTypescript, SiPostgresql, SiRadixui, SiMongoose, SiRedux, SiAxios, SiReactquery, SiPrisma } from "react-icons/si";
 import { BackgroundLines } from "../ui/BackgroundLines/background-lines";
-import React from "react";
-
-interface Skill {
-    icon: React.ReactElement;
-    label: string;
-    color: string;
-}
+import { Skill } from "@/src/type";
 
 const Skills: React.FC = () => {
     const frontendSkills: Skill[] = [

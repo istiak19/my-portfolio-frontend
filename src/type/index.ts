@@ -91,3 +91,9 @@ export interface ApiResponse<T> {
     data?: T;
     message?: string;
 };
+
+export interface Skill {
+    icon: React.ReactElement;
+    label: string;
+    color: string;
+};
