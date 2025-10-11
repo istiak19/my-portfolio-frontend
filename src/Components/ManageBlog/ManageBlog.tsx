@@ -67,55 +67,71 @@ const ManageBlog = ({ decoded }: { decoded: string }) => {
     };
 
     return (
-        <div className="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-            <div className="p-6">
-                <h1 className="text-xl font-semibold text-center mb-4">Manage Blogs</h1>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="text-center">Title</TableHead>
-                            <TableHead className="text-center">Slug</TableHead>
-                            <TableHead className="text-center">Published</TableHead>
-                            <TableHead className="text-center">Actions</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {blogs.map((blog) => (
-                            <TableRow key={blog.id}>
-                                <TableCell className="text-center">{blog.title}</TableCell>
-                                <TableCell className="text-center">{blog.slug}</TableCell>
-                                <TableCell className="text-center">
-                                    <Button
-                                        variant={blog.published ? "default" : "destructive"}
-                                        size="sm"
-                                        className="cursor-pointer"
-                                        onClick={() => handleTogglePublish(blog.id, blog.published)}
-                                    >
-                                        {blog.published ? "Published" : "Unpublished"}
-                                    </Button>
-                                </TableCell>
-                                <TableCell className="flex gap-2 justify-center">
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="cursor-pointer"
-                                        onClick={() => handleUpdate(blog.id)}
-                                    >
-                                        Update
-                                    </Button>
-                                    <Button
-                                        variant="destructive"
-                                        size="sm"
-                                        className="cursor-pointer"
-                                        onClick={() => handleDelete(blog.id)}
-                                    >
-                                        Delete
-                                    </Button>
-                                </TableCell>
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+            <div className="p-4 sm:p-6 lg:p-8">
+                <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+                    Manage Blogs
+                </h1>
+
+                <div className="w-full overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800 shadow-md">
+                    <Table className="min-w-[600px] w-full">
+                        <TableHeader>
+                            <TableRow className="bg-gray-100 dark:bg-gray-900">
+                                <TableHead className="text-center text-sm sm:text-base">Title</TableHead>
+                                <TableHead className="text-center text-sm sm:text-base">Slug</TableHead>
+                                <TableHead className="text-center text-sm sm:text-base">Published</TableHead>
+                                <TableHead className="text-center text-sm sm:text-base">Actions</TableHead>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
+                        </TableHeader>
+
+                        <TableBody>
+                            {blogs.map((blog) => (
+                                <TableRow
+                                    key={blog.id}
+                                    className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                                >
+                                    <TableCell className="text-center text-xs sm:text-sm break-words">
+                                        {blog.title}
+                                    </TableCell>
+
+                                    <TableCell className="text-center text-xs sm:text-sm break-words">
+                                        {blog.slug}
+                                    </TableCell>
+
+                                    <TableCell className="text-center">
+                                        <Button
+                                            variant={blog.published ? "default" : "destructive"}
+                                            size="sm"
+                                            className="cursor-pointer text-xs sm:text-sm"
+                                            onClick={() => handleTogglePublish(blog.id, blog.published)}
+                                        >
+                                            {blog.published ? "Published" : "Unpublished"}
+                                        </Button>
+                                    </TableCell>
+
+                                    <TableCell className="flex flex-col sm:flex-row gap-2 justify-center">
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="cursor-pointer text-xs sm:text-sm w-full sm:w-auto"
+                                            onClick={() => handleUpdate(blog.id)}
+                                        >
+                                            Update
+                                        </Button>
+                                        <Button
+                                            variant="destructive"
+                                            size="sm"
+                                            className="cursor-pointer text-xs sm:text-sm w-full sm:w-auto"
+                                            onClick={() => handleDelete(blog.id)}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
             </div>
         </div>
     );

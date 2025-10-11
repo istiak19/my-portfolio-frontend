@@ -10,6 +10,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { BackgroundBeams } from "../ui/BackgroundBeams/background-beams";
 
 const blogSchema = z.object({
     title: z.string().min(1, 'Title is required'),
@@ -149,6 +150,7 @@ const BlogForm = ({ decoded }: { decoded: string }) => {
             >
                 {isSubmitting ? "Creating..." : "Create Blog"}
             </Button>
+            <BackgroundBeams />
         </form>
     );
 };

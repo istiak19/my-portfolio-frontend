@@ -1,4 +1,3 @@
-// frontend/src/types/next-auth.d.ts
 import NextAuth from "next-auth";
 
 declare module "next-auth" {
@@ -6,13 +5,13 @@ declare module "next-auth" {
         user: {
             id: string;
             email?: string | null;
-            accessToken?: string; // add accessToken
+            accessToken?: string;
         };
     }
 
     interface User {
         id: string;
         email?: string | null;
-        accessToken?: string; // add accessToken
+        accessToken?: string;
     }
-}
+};

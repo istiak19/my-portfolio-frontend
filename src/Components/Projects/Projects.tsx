@@ -46,8 +46,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="flex flex-col justify-between"
-                            >
+                                className="flex flex-col justify-between">
                                 <h3 className="text-xl font-bold mb-4 text-left bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                                     {project.title}
                                 </h3>
@@ -96,7 +95,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                         ))
                     ) : (
                         <p className="text-gray-500 dark:text-gray-400 col-span-full text-center">
-                            🚧 No projects found.
+                            No projects found.
                         </p>
                     )}
                 </div>

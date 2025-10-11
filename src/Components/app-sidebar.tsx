@@ -10,7 +10,6 @@ import toast from "react-hot-toast";
 import { signOut } from "next-auth/react";
 import { Button } from "./ui/button";
 
-// Only these routes will appear
 const links = [
   { name: "Dashboard", path: "/dashboard", icon: <Home className="h-4 w-4" /> },
   { name: "Create Project", path: "/dashboard/project", icon: <PlusCircle className="h-4 w-4" /> },
