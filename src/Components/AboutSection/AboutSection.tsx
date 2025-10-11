@@ -40,12 +40,12 @@ const AboutSection = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="relative w-[200px] h-[200px] bg-gradient-to-tr from-pink-500 to-purple-500 p-1 rounded-[30%]"
+                    className="relative w-[300px] h-[200px] bg-gradient-to-tr from-pink-500 to-purple-500 p-1 rounded-[30%]"
                 >
                     <div className="w-full h-full rounded-[30%] overflow-hidden">
                         <Image src={profilePic} alt="Istiak" className="w-full h-full" />
                     </div>
-                    <h1 className="absolute origin-right mt-5 text-xs md:text-sm font-semibold flex items-center gap-2">
+                    <h1 className="absolute origin-right mt-5 ext-xs md:text-sm font-semibold flex items-center gap-2">
                         <span className="bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                             Build Solutions. Drive Impact.
                         </span>
