@@ -81,7 +81,7 @@ const BlogForm = ({ decoded }: { decoded: string }) => {
             onSubmit={handleSubmit(onSubmit)}
             className="container mx-auto p-8 bg-white dark:bg-black rounded-2xl shadow-lg space-y-6"
         >
-            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100">
+            <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient">
                 Create Blog
             </h2>
 

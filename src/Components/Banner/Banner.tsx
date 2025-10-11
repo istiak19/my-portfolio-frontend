@@ -31,11 +31,7 @@ const Banner = () => {
 
     const links = [
         { title: "GitHub", icon: <FaGithub />, href: "https://github.com/istiak19" },
-        {
-            title: "LinkedIn",
-            icon: <FaLinkedin />,
-            href: "https://www.linkedin.com/in/istiak-ahamed-0619at/",
-        },
+        { title: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/istiak-ahamed-0619at/" },
         { title: "Email", icon: <MdMail />, href: "mailto:istiakanik79@gmail.com" },
         { title: "Twitter", icon: <FaTwitter />, href: "https://x.com/ISTIAKA13842838" },
         { title: "Facebook", icon: <FaFacebook />, href: "https://www.facebook.com/istiak.ahamed.19/" },

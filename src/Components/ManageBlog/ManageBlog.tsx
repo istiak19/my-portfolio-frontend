@@ -69,7 +69,7 @@ const ManageBlog = ({ decoded }: { decoded: string }) => {
     return (
         <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
             <div className="p-4 sm:p-6 lg:p-8">
-                <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+                <h1 className="text-2xl sm:text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-6">
                     Manage Blogs
                 </h1>
 
