@@ -20,9 +20,13 @@ const textVariant = {
 const BlogGrid = ({ blogs }: BlogProps) => {
     return (
         <div className="container mx-auto px-6 py-12 bg-white dark:bg-black">
-            <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            <h1 className="md:text-4xl text-2xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient text-center mb-6">
                 Insights & Stories
             </h1>
+
+            <p className="mb-16 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Explore insightful articles on web development, design trends, and programming best practices — curated to inspire your next big idea.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {blogs.map((blog, index) => (

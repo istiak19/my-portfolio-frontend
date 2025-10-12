@@ -112,7 +112,7 @@ const CreateProject = ({ decoded }: { decoded: string }) => {
             onSubmit={handleSubmit(onSubmit)}
             className="container mx-auto bg-white dark:bg-black p-8 rounded-2xl shadow-lg space-y-8"
         >
-            <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">
+            <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:pb-8 relative font-semibold tracking-tight">
                 Upload Project
             </h2>
 

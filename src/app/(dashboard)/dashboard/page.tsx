@@ -35,7 +35,7 @@ const Dashboard = async () => {
       <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">
+          <h1 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:pb-8 relative font-semibold tracking-tight mb-4">
             Welcome, {user?.email}
           </h1>
           <p className="text-gray-500 dark:text-gray-300 mt-2">
