@@ -69,7 +69,7 @@ const AboutSection = () => {
                     <motion.p
                         variants={textVariant}
                         custom={1}
-                        className="text-lg mb-4 text-center lg:text-left"
+                        className="mb-4 text-center lg:text-left"
                     >
                         {about.data.introduction}
                     </motion.p>

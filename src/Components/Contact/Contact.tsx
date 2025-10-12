@@ -35,7 +35,7 @@ const Contact = () => {
                 {/* Header */}
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
+                        <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:pb-8 relative font-semibold tracking-tight">
                             Let’s Connect
                         </h2>
                         <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto text-lg mt-3">

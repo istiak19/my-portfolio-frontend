@@ -28,9 +28,7 @@ const EducationJourney = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="md:text-4xl text-2xl font-semibold text-center 
-          bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 
-          text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-10"
+                    className="md:text-4xl text-2xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-10"
                 >
                     Education Journey
                 </motion.h2>
@@ -107,9 +105,7 @@ const EducationJourney = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="md:text-3xl text-xl font-semibold text-center 
-          bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 
-          text-transparent bg-clip-text drop-shadow-md animate-text-gradient mt-12"
+                    className="md:text-4xl text-2xl font-semibold text-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mt-12"
                 >
                     Courses & Certificates
                 </motion.h2>

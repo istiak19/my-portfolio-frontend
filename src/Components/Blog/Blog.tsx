@@ -10,7 +10,7 @@ const Blog = ({ blogs }: BlogProps) => {
         <div className="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
             <div className="container mx-auto px-6 py-12">
                 <div className="flex flex-col items-center justify-center overflow-hidden rounded-md">
-                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-4">
+                    <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:pb-8 relative font-semibold tracking-tight">
                         Blog Highlights
                     </h2>
                     <p className="mb-5 text-gray-600 dark:text-gray-300 max-w-2xl text-center">

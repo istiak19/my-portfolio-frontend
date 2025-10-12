@@ -26,7 +26,7 @@ const ContactSection = () => {
                     variants={fadeUp}
                 >
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
+                        <h2 className="md:text-4xl text-2xl font-semibold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg animate-text-gradient">
                             Let’s Connect
                         </h2>
                     </div>

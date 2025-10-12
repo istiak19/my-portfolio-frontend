@@ -30,7 +30,7 @@ const AboutPage = ({ about }: { about: AboutData | null }) => {
         <div className="bg-white dark:bg-black transition-colors duration-300 px-5">
             <BackgroundBeamsWithCollision>
                 <div className="container mx-auto">
-                    <h2 className="text-4xl font-semibold text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient mb-8">
+                    <h2 className="text-center bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:pb-8 relative font-semibold tracking-tight">
                         About Me
                     </h2>
 
