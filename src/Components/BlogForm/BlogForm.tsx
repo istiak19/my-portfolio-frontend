@@ -22,7 +22,6 @@ const blogSchema = z.object({
 type BlogFormValues = z.infer<typeof blogSchema>;
 
 const BlogForm = ({ decoded }: { decoded: string }) => {
-    console.log(decoded)
     const router = useRouter();
     const [image, setImage] = useState<File | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,7 +40,7 @@ const BlogForm = ({ decoded }: { decoded: string }) => {
         if (!image) {
             toast.error('Blog image is required');
             return;
-        }
+        };
 
         const formData = new FormData();
         formData.append('data', JSON.stringify(values));
@@ -59,7 +58,6 @@ const BlogForm = ({ decoded }: { decoded: string }) => {
             });
 
             const data = await res.json();
-            console.log(data)
             if (res.ok) {
                 toast.success('Blog created successfully!');
                 reset();
@@ -67,13 +65,13 @@ const BlogForm = ({ decoded }: { decoded: string }) => {
                 router.push("/dashboard/manageBlog")
             } else {
                 toast.error(data.message || 'Failed to create blog');
-            }
+            };
         } catch (err) {
             console.error(err);
             toast.error('Something went wrong');
         } finally {
             setIsSubmitting(false);
-        }
+        };
     };
 
     return (
