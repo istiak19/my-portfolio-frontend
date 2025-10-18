@@ -2,6 +2,9 @@
   "name": "portfolio-latest",
   "version": "0.1.0",
   "private": true,
+  "author":  "Istiak Ahamed",
+  "license": "MIT",
+  "description": "Personal portfolio built with Next.js 15, Tailwind CSS 4, and Framer Motion.",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
