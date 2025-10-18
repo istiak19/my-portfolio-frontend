@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo-2.png";
 import { usePathname } from "next/navigation";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaSignInAlt } from "react-icons/fa";
@@ -45,8 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({ isLoggedIn }) => {
             <nav className="flex items-center justify-between px-3 md:px-4 py-3 container mx-auto">
                 {/* Logo */}
                 <Link href="/" className="flex items-center group">
-                    <div className="relative w-12 h-12 overflow-hidden group-hover:scale-105 transition-transform duration-200">
-                        <Image src={logo} alt="Logo" fill className="object-cover" />
+                    <div className="relative w-10 h-10 overflow-hidden group-hover:scale-105 transition-transform duration-200">
+                        <Image src={logo} alt="Logo" fill />
                     </div>
                     <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-md animate-text-gradient group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
                         Istiak Ahamed

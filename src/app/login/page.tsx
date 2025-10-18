@@ -2,7 +2,7 @@ import LoginForm from "@/src/components/LoginForm/LoginForm";
 import Image from "next/image";
 import image from "../../../public/login.jpg";
 import Link from "next/link";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo-2.png";
 
 export const metadata = {
     title: "Login – Istiak Ahamed",
