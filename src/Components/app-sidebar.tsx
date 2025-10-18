@@ -5,7 +5,7 @@ import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupC
 import { Home, PlusCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-2.png";
 import toast from "react-hot-toast";
 import { signOut } from "next-auth/react";
 import { Button } from "./ui/button";
