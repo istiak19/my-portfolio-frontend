@@ -60,7 +60,7 @@ const AboutPage = ({ about }: { about: AboutData | null }) => {
                             transition={{ duration: 0.8 }}
                             className="flex-1/2"
                         >
-                            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
+                            <p className="text-gray-700 dark:text-gray-300 text-justify">
                                 {about?.introduction || "No introduction available."}
                             </p>
 
