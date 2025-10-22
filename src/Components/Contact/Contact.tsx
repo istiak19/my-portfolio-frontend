@@ -55,7 +55,7 @@ const Contact = () => {
                         custom={1}
                         className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
                     >
-                        <div className="bg-gray-100 dark:bg-gray-900 p-6 md:p-8 rounded-[14px] shadow-xl transition-colors duration-300">
+                        <div className="bg-gray-100 dark:bg-black p-6 md:p-8 rounded-[14px] shadow-xl transition-colors duration-300">
                             <h3 className="text-2xl font-semibold mb-5 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                 Contact Information
                             </h3>
@@ -128,7 +128,7 @@ const Contact = () => {
                         custom={2}
                         className="p-[1px] rounded-xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
                     >
-                        <form className="bg-gray-100 dark:bg-gray-900 p-6 md:p-12 rounded-[14px] shadow-xl space-y-5 transition-colors duration-300">
+                        <form className="bg-gray-100 dark:bg-black p-6 md:p-12 rounded-[14px] shadow-xl space-y-5 transition-colors duration-300">
                             <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-md animate-text-gradient">
                                 Send a Message
                             </h3>
